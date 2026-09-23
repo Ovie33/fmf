@@ -18,29 +18,29 @@ export function WelcomeIntro({ hasExplored, onExplore }: WelcomeIntroProps) {
       }`}
     >
       <div className="max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-200 font-mono text-xs mb-6 shadow-2xl backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/70 border border-purple-500/30 text-purple-200 font-mono text-xs mb-6 shadow-xl backdrop-blur-sm">
           <Sparkles className="w-3.5 h-3.5 text-purple-300 animate-pulse" />
           <span>FREEMAN FIRMS ARCHITECTURAL BLUEPRINT</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-4 uppercase leading-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)]">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-100 mb-3 uppercase leading-tight drop-shadow-[0_4px_25px_rgba(0,0,0,0.95)]">
           WELCOME TO{" "}
-          <span className="block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-purple-400 drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)]">
+          <span className="block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-100 via-purple-300 to-fuchsia-300 drop-shadow-[0_4px_25px_rgba(0,0,0,0.95)]">
             FREEMAN FIRMS ECOSYSTEM
           </span>
         </h1>
 
-        <p className="text-sm sm:text-lg text-purple-100 max-w-xl mx-auto mb-8 font-normal leading-relaxed drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]">
+        <p className="text-sm sm:text-lg text-purple-200/90 max-w-xl mx-auto mb-8 font-normal leading-relaxed drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]">
           A unified solar architecture engineered for high-speed compute, capital liquidity, autonomous AI subnets, and cross-chain scale.
         </p>
 
         <div className="pointer-events-auto">
           <button
             onClick={onExplore}
-            className="px-9 py-4 rounded-2xl bg-white hover:bg-purple-100 text-purple-950 font-extrabold text-sm tracking-wider transition-all shadow-2xl shadow-purple-500/50 hover:scale-105 flex items-center gap-3 mx-auto uppercase group cursor-pointer"
+            className="px-9 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-sm tracking-wider transition-all shadow-xl shadow-purple-900/40 hover:scale-105 flex items-center gap-3 mx-auto uppercase group cursor-pointer border border-purple-400/30"
           >
             <span>Explore Ecosystem</span>
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-purple-200" />
           </button>
         </div>
       </div>

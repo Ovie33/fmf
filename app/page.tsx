@@ -1,68 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
-import { PLANETS, type PlanetData } from "./data/planets";
-import { PitchBanner } from "./components/PitchBanner";
-import { SolarCanvas } from "./components/SolarCanvas";
-import { WelcomeIntro } from "./components/WelcomeIntro";
-import { SolarHud } from "./components/SolarHud";
-import { ServiceDirectory } from "./components/ServiceDirectory";
-import { AboutUs } from "./components/AboutUs";
+import React from "react";
+import { Navbar } from "./components/Navbar";
+import { PortalHero } from "./components/PortalHero";
+import { PortalServices } from "./components/PortalServices";
+import { PortalArchitecture } from "./components/PortalArchitecture";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
-  const [hasExplored, setHasExplored] = useState(false);
-  const [selectedPlanet, setSelectedPlanet] = useState<PlanetData>(PLANETS[0]);
-  const [hoveredPlanet, setHoveredPlanet] = useState<PlanetData | null>(null);
-  const [isRotating, setIsRotating] = useState(true);
-  const [orbitSpeedFactor, setOrbitSpeedFactor] = useState(1);
-
   return (
-    <div className="min-h-screen bg-[#07050d] text-[#f8fafc] selection:bg-purple-500/30 selection:text-purple-200 font-sans overflow-x-hidden relative">
-      {/* 1. Header Bar */}
-      <PitchBanner
-        hasExplored={hasExplored}
-        onResetIntro={() => setHasExplored(false)}
-      />
+    <main className="min-h-screen bg-white text-[#18181b] font-sans selection:bg-[#a500a3]/20 selection:text-[#a500a3] overflow-x-hidden">
+      {/* 1. Header Navigation */}
+      <Navbar />
 
-      {/* 2. Interactive 3D Solar System Viewport */}
-      <div className="relative w-full h-screen">
-        {/* Three.js 3D Canvas */}
-        <SolarCanvas
-          hasExplored={hasExplored}
-          isRotating={isRotating}
-          orbitSpeedFactor={orbitSpeedFactor}
-          onSelectPlanet={setSelectedPlanet}
-          onHoverPlanet={setHoveredPlanet}
-        />
+      {/* 2. Unified Ecosystem Portal Hero */}
+      <PortalHero />
 
-        {/* Screen 1: Welcome Intro (Fades out into background on Explore) */}
-        <WelcomeIntro
-          hasExplored={hasExplored}
-          onExplore={() => setHasExplored(true)}
-        />
+      {/* 3. Core Ecosystem Services Directory & Launchpads */}
+      <PortalServices />
 
-        {/* Screen 2: Interactive 3D HUD & Planet Service Details */}
-        <SolarHud
-          hasExplored={hasExplored}
-          isRotating={isRotating}
-          orbitSpeedFactor={orbitSpeedFactor}
-          selectedPlanet={selectedPlanet}
-          hoveredPlanet={hoveredPlanet}
-          onToggleRotating={() => setIsRotating((prev) => !prev)}
-          onSetSpeed={setOrbitSpeedFactor}
-          onSelectPlanet={setSelectedPlanet}
-        />
-      </div>
+      {/* 4. Ecosystem Value Pillars & Architecture */}
+      <PortalArchitecture />
 
-      {/* 3. Detailed Skeleton Service Directory */}
-      <ServiceDirectory onSelectPlanet={setSelectedPlanet} />
-
-      {/* 4. About Us & Ecosystem Manifesto Section */}
-      <AboutUs />
-
-      {/* 5. Footer */}
+      {/* 5. Official Regulatory & Legal Policy Footer */}
       <Footer />
-    </div>
+    </main>
   );
 }

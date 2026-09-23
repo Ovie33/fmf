@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FREEMAN FIRMS // Ecosystem Architecture",
-  description: "The unified modular solar ecosystem architecture for Freeman Firms.",
+  title: "Freemann Firms Ecosystem | Unified Financial Gateway",
+  description:
+    "Explore the Freemann Firms ecosystem of performance-driven wealth management, AI quant trading engines, and institutional custody.",
 };
 
 export default function RootLayout({
@@ -25,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#07050d] text-[#f8fafc] antialiased selection:bg-purple-500/30 selection:text-purple-200">
+      <body className="min-h-full bg-white text-[#18181b] antialiased selection:bg-[#a500a3]/20 selection:text-[#a500a3]">
         {children}
       </body>
     </html>

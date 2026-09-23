@@ -56,21 +56,21 @@ export function SolarCanvas({
     container.replaceChildren(renderer.domElement);
     rendererRef.current = renderer;
 
-    // 3. LIGHTING
-    const ambientLight = new THREE.AmbientLight(0xf5f3ff, 0.6);
+    // 3. LIGHTING (Gentle, muted ambient lights - no harsh blinding glare)
+    const ambientLight = new THREE.AmbientLight(0xd8b4fe, 0.4);
     scene.add(ambientLight);
 
-    const sunPointLight = new THREE.PointLight(0xffffff, 4, 130);
+    const sunPointLight = new THREE.PointLight(0xd8b4fe, 1.8, 120);
     sunPointLight.position.set(0, 0, 0);
     scene.add(sunPointLight);
 
-    const violetRimLight = new THREE.PointLight(0xa855f7, 2, 100);
-    violetRimLight.position.set(0, 20, 0);
-    scene.add(violetRimLight);
+    const softVioletLight = new THREE.PointLight(0x7e22ce, 1.2, 90);
+    softVioletLight.position.set(0, 20, 0);
+    scene.add(softVioletLight);
 
-    // 4. STARFIELD BACKGROUND
+    // 4. STARFIELD BACKGROUND (Muted soft particles)
     const starGeometry = new THREE.BufferGeometry();
-    const starCount = 1500;
+    const starCount = 1400;
     const starPositions = new Float32Array(starCount * 3);
 
     for (let i = 0; i < starCount * 3; i += 3) {
@@ -81,34 +81,34 @@ export function SolarCanvas({
 
     starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
     const starMaterial = new THREE.PointsMaterial({
-      color: 0xddd6fe,
-      size: 0.28,
+      color: 0xa855f7,
+      size: 0.22,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.5,
     });
     const starField = new THREE.Points(starGeometry, starMaterial);
     scene.add(starField);
 
-    // 5. CENTRAL SUN (Nexus)
-    const sunGeom = new THREE.SphereGeometry(2.3, 32, 32);
+    // 5. CENTRAL SUN (Soft Ethereal Lavender-Violet Orb)
+    const sunGeom = new THREE.SphereGeometry(2.2, 32, 32);
     const sunMat = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
-      emissive: 0x9333ea,
-      emissiveIntensity: 1.2,
-      roughness: 0.1,
-      metalness: 0.2,
+      color: 0xc084fc,
+      emissive: 0x7e22ce,
+      emissiveIntensity: 0.7,
+      roughness: 0.4,
+      metalness: 0.1,
     });
     const sun = new THREE.Mesh(sunGeom, sunMat);
     sun.userData = { planetData: PLANETS[0] };
     scene.add(sun);
     sunMeshRef.current = sun;
 
-    // Glowing Purple Halo
-    const haloGeom = new THREE.SphereGeometry(2.8, 32, 32);
+    // Glowing Soft Halo
+    const haloGeom = new THREE.SphereGeometry(2.7, 32, 32);
     const haloMat = new THREE.MeshBasicMaterial({
-      color: 0xc084fc,
+      color: 0x9333ea,
       transparent: true,
-      opacity: 0.28,
+      opacity: 0.2,
       side: THREE.BackSide,
     });
     const halo = new THREE.Mesh(haloGeom, haloMat);
@@ -118,7 +118,6 @@ export function SolarCanvas({
     planetMeshesRef.current = [];
 
     PLANETS.slice(1).forEach((planet, index) => {
-      // Orbital Ring Line
       const orbitCurve = new THREE.EllipseCurve(0, 0, planet.distance, planet.distance, 0, 2 * Math.PI, false, 0);
       const points = orbitCurve.getPoints(120);
       const orbitGeometry = new THREE.BufferGeometry().setFromPoints(
@@ -127,19 +126,18 @@ export function SolarCanvas({
       const orbitMaterial = new THREE.LineBasicMaterial({
         color: new THREE.Color(planet.color),
         transparent: true,
-        opacity: 0.25,
+        opacity: 0.2,
       });
       const orbitLine = new THREE.Line(orbitGeometry, orbitMaterial);
       scene.add(orbitLine);
 
-      // Planet Sphere
       const planetGeom = new THREE.SphereGeometry(planet.size, 32, 32);
       const planetMat = new THREE.MeshStandardMaterial({
         color: new THREE.Color(planet.color),
         emissive: new THREE.Color(planet.glowColor),
-        emissiveIntensity: 0.45,
-        roughness: 0.3,
-        metalness: 0.7,
+        emissiveIntensity: 0.35,
+        roughness: 0.4,
+        metalness: 0.5,
       });
       const planetMesh = new THREE.Mesh(planetGeom, planetMat);
 
@@ -151,14 +149,13 @@ export function SolarCanvas({
       );
       planetMesh.userData = { planetData: planet };
 
-      // Optional Ring
       if (planet.hasRing && planet.ringColor) {
         const ringGeom = new THREE.RingGeometry(planet.size * 1.4, planet.size * 2.3, 32);
         const ringMat = new THREE.MeshBasicMaterial({
           color: new THREE.Color(planet.ringColor),
           side: THREE.DoubleSide,
           transparent: true,
-          opacity: 0.75,
+          opacity: 0.5,
         });
         const ringMesh = new THREE.Mesh(ringGeom, ringMat);
         ringMesh.rotation.x = Math.PI / 2.3;
