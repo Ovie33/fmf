@@ -24,9 +24,6 @@ export function Navbar() {
           <span className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-[#a500a3]">
             Freemann Firms
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#a500a3]/10 text-[#a500a3] px-2 py-0.5 rounded border border-[#a500a3]/20 shrink-0">
-            Portal
-          </span>
         </a>
       </div>
 

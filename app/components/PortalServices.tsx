@@ -20,7 +20,6 @@ import {
 export function PortalServices() {
   const [academyModalOpen, setAcademyModalOpen] = useState(false);
   const [waitlistModalOpen, setWaitlistModalOpen] = useState(false);
-  const [p2pModalOpen, setP2pModalOpen] = useState(false);
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [waitlistEmail, setWaitlistEmail] = useState("");
 
@@ -118,21 +117,21 @@ export function PortalServices() {
       badge: "ACTIVE SERVICE",
       badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
       dotColor: "bg-[#a500a3]",
-      desc: "Buy, sell, and swap crypto directly with verified peers in your local currency. Protected by cryptographic smart escrow, 0% platform trading fees, and instant bank / mobile money settlement.",
+      desc: "Buy, sell, and swap crypto directly with verified peers in your local currency. Protected by cryptographic smart escrow, 0% platform trading fees, and direct assistance on WhatsApp.",
       illustration: "/images/deposit.png",
       isLive: true,
       metrics: [
         { label: "Escrow Fee", value: "0% Maker Fee" },
         { label: "Settlement", value: "Instant P2P" },
-        { label: "Currencies", value: "Fiat + Crypto" },
+        { label: "Support", value: "WhatsApp Desk" },
       ],
       features: [
         "Direct buyer-to-seller transfers with automated escrow protection",
         "Multiple local payment rails (Bank transfer, Mobile Money, Cash)",
-        "Verified trader badges with 24/7 dispute resolution",
+        "Direct trade execution and merchant support via WhatsApp",
       ],
-      actionType: "p2p_action",
-      actionText: "Access P2P Exchange Desk",
+      actionType: "p2p_contact",
+      actionText: "Contact P2P on WhatsApp",
     },
   ];
 
@@ -261,14 +260,28 @@ export function PortalServices() {
                       </div>
                     )}
 
-                    {p.actionType === "p2p_action" && (
-                      <button
-                        onClick={() => setP2pModalOpen(true)}
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-6 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto cursor-pointer active:scale-98"
-                      >
-                        <Users2 className="w-4 h-4" />
-                        <span>{p.actionText}</span>
-                      </button>
+                    {p.actionType === "p2p_contact" && (
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
+                        <a
+                          href="https://wa.me/?text=Hello%20Freemann%20Firms%20P2P%20Desk%2C%20I%20would%20like%20to%20execute%20a%20P2P%20crypto%2Ffiat%20trade."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all w-full sm:w-auto active:scale-98"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          <span>Contact P2P on WhatsApp</span>
+                        </a>
+
+                        <a
+                          href="https://freeman-firms.vercel.app/register"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto active:scale-98"
+                        >
+                          <span>Launch P2P Desk</span>
+                          <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -411,67 +424,6 @@ export function PortalServices() {
                 </button>
               </form>
             )}
-          </div>
-        </div>
-      )}
-
-      {/* Modal 3: P2P Desk Quick Access Modal */}
-      {p2pModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#e4e4e7] relative animate-in fade-in zoom-in-95">
-            <button
-              onClick={() => setP2pModalOpen(false)}
-              className="absolute top-4 right-4 p-2 text-[#71717a] hover:text-[#18181b] cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#a500a3]/10 text-[#a500a3] flex items-center justify-center shrink-0">
-                <Users2 className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#18181b]">
-                  Freemann P2P Exchange
-                </h3>
-                <span className="text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded">
-                  0% Escrow Fee
-                </span>
-              </div>
-            </div>
-
-            <p className="text-xs text-[#52525b] leading-relaxed mb-5">
-              Connect to verified peer traders, create buy/sell orders, or initiate instant fiat-to-crypto swaps with escrow protection.
-            </p>
-
-            <div className="space-y-2.5 mb-5">
-              <a
-                href="https://freeman-firms.vercel.app/register"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full h-11 rounded-[9px] text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 shadow-md shadow-[#a500a3]/20 active:scale-98"
-              >
-                <span>Launch P2P Trading Desk</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-
-              <a
-                href="https://wa.me/?text=Hello%20Freemann%20Firms%20P2P%20Desk%2C%20I%20would%20like%20to%20execute%20a%20P2P%20trade."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 p-3 rounded-xl border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 transition-all text-xs font-semibold"
-              >
-                <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Contact P2P OTC Desk via WhatsApp</span>
-              </a>
-            </div>
-
-            <button
-              onClick={() => setP2pModalOpen(false)}
-              className="w-full h-11 rounded-[9px] bg-[#f4f4f5] text-xs font-semibold text-[#52525b] hover:bg-[#e4e4e7] transition-colors cursor-pointer"
-            >
-              Close
-            </button>
           </div>
         </div>
       )}

@@ -27,7 +27,7 @@ export function PortalHero() {
         <div className="flex-1 text-center lg:text-left w-full">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#a500a3]/10 border border-[#a500a3]/20 text-[#a500a3] font-semibold text-[11px] sm:text-xs mb-4 sm:mb-6">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>UNIFIED 4-PRODUCT ECOSYSTEM</span>
+            <span>UNIFIED PRODUCT ECOSYSTEM</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#18181b] leading-tight mb-4 sm:mb-6">
