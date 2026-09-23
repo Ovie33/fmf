@@ -8,13 +8,6 @@
   --accent-white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -44,7 +37,7 @@ body {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
 }
 
-/* Purple & White Glassmorphic card styling */
+/* Purple & White Glassmorphism */
 .glass-panel {
   background: rgba(14, 10, 24, 0.7);
   backdrop-filter: blur(12px);

@@ -10,7 +10,7 @@ interface PitchBannerProps {
 
 export function PitchBanner({ hasExplored, onResetIntro }: PitchBannerProps) {
   return (
-    <div className="w-full bg-[#0a0616] border-b border-purple-500/20 text-xs py-2 px-4 sticky top-0 z-50 backdrop-blur-md">
+    <div className="w-full bg-[#0a0616]/90 border-b border-purple-500/20 text-xs py-2 px-4 sticky top-0 z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <span className="flex h-2 w-2 relative">
@@ -26,13 +26,15 @@ export function PitchBanner({ hasExplored, onResetIntro }: PitchBannerProps) {
           {hasExplored ? (
             <button
               onClick={onResetIntro}
-              className="px-2.5 py-1 rounded bg-purple-950/80 hover:bg-purple-900 text-purple-200 border border-purple-500/30 transition-all flex items-center gap-1 cursor-pointer"
+              className="px-2.5 py-1 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-purple-200 border border-purple-500/30 transition-all flex items-center gap-1 cursor-pointer"
             >
               <ArrowLeft className="w-3 h-3 text-purple-300" />
               <span>Return to Intro</span>
             </button>
           ) : (
-            <span className="text-purple-300/60">CLICK EXPLORE TO ZOOM INTO SOLAR VIEW</span>
+            <span className="text-purple-300/60 hidden sm:inline">
+              CLICK EXPLORE TO ZOOM INTO SOLAR VIEW
+            </span>
           )}
         </div>
       </div>

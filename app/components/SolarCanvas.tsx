@@ -282,7 +282,6 @@ export function SolarCanvas({
       targetCameraPos.current.set(0, 26, 38);
       targetLookAt.current.set(0, 0, 0);
     } else {
-      // Original overview perspective showing planets & orbits directly
       targetCameraPos.current.set(0, 48, 65);
       targetLookAt.current.set(0, 0, 0);
     }

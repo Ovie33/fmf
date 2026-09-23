@@ -18,8 +18,8 @@ export default function Home() {
   const [orbitSpeedFactor, setOrbitSpeedFactor] = useState(1);
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-[#f0f4f9] selection:bg-cyan-500/30 font-sans overflow-x-hidden relative">
-      {/* 1. Pitch Header Bar */}
+    <div className="min-h-screen bg-[#07050d] text-[#f8fafc] selection:bg-purple-500/30 selection:text-purple-200 font-sans overflow-x-hidden relative">
+      {/* 1. Header Bar */}
       <PitchBanner
         hasExplored={hasExplored}
         onResetIntro={() => setHasExplored(false)}
@@ -55,7 +55,7 @@ export default function Home() {
         />
       </div>
 
-      {/* 3. Detailed Skeleton Service Directory & Pitch Strategy */}
+      {/* 3. Detailed Skeleton Service Directory */}
       <ServiceDirectory onSelectPlanet={setSelectedPlanet} />
 
       {/* 4. About Us & Ecosystem Manifesto Section */}

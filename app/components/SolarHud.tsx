@@ -43,7 +43,7 @@ export function SolarHud({
       }`}
     >
       {/* Top Left Title & Status */}
-      <div className="absolute top-6 left-6 pointer-events-auto flex items-center gap-3 bg-[#0d091a]/70 backdrop-blur-md p-3 rounded-2xl border border-purple-500/20 shadow-xl">
+      <div className="absolute top-6 left-6 pointer-events-auto flex items-center gap-3 bg-[#0d091a]/85 backdrop-blur-md p-3 rounded-2xl border border-purple-500/20 shadow-xl">
         <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-400 to-white p-[1px] flex items-center justify-center">
           <div className="w-full h-full bg-[#0d091a] rounded-[10px] flex items-center justify-center">
             <Orbit className="w-4 h-4 text-purple-300 animate-spin-slow" />
@@ -61,7 +61,7 @@ export function SolarHud({
       </div>
 
       {/* Top Right Simulation Controls */}
-      <div className="absolute top-6 right-6 pointer-events-auto flex items-center gap-2 bg-[#0d091a]/70 backdrop-blur-md p-1.5 rounded-2xl border border-purple-500/20 shadow-xl font-mono text-xs">
+      <div className="absolute top-6 right-6 pointer-events-auto flex items-center gap-2 bg-[#0d091a]/85 backdrop-blur-md p-1.5 rounded-2xl border border-purple-500/20 shadow-xl font-mono text-xs">
         <button
           onClick={onToggleRotating}
           className={`px-2.5 py-1 rounded-xl border transition-all flex items-center gap-1.5 cursor-pointer text-[11px] ${
@@ -193,9 +193,9 @@ export function SolarHud({
         </button>
       )}
 
-      {/* ULTRA-SLIM BOTTOM FLOATING PILL SELECTOR (With hidden scrollbar) */}
+      {/* ULTRA-SLIM BOTTOM FLOATING PILL SELECTOR */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-auto max-w-[95vw]">
-        <div className="bg-[#0d091a]/70 backdrop-blur-xl px-3 py-1.5 rounded-full border border-purple-500/30 shadow-2xl flex items-center gap-1.5 overflow-x-auto no-scrollbar scrollbar-none">
+        <div className="bg-[#0d091a]/70 backdrop-blur-xl px-3 py-1.5 rounded-full border border-purple-500/30 shadow-2xl flex items-center gap-1.5 overflow-x-auto no-scrollbar">
           {PLANETS.map((planet) => {
             const isCurrent = selectedPlanet.id === planet.id;
             return (
