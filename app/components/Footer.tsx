@@ -4,68 +4,32 @@ import React from "react";
 import Image from "next/image";
 
 export function Footer() {
-  const legalLinks = [
-    { name: "Terms of Service", href: "https://freeman-firms.vercel.app/legal/terms-of-service" },
-    { name: "Privacy Policy", href: "https://freeman-firms.vercel.app/legal/privacy-policy" },
-    { name: "Risk Disclosure Statement", href: "https://freeman-firms.vercel.app/legal/risk-disclosure" },
-    { name: "Electronic Communications & Signature Consent", href: "https://freeman-firms.vercel.app/legal/esign-consent" },
-    { name: "Investment Contract Agreement", href: "https://freeman-firms.vercel.app/legal/investment-agreement" },
-    { name: "Custody & Client Asset Safeguarding Policy", href: "https://freeman-firms.vercel.app/legal/client-asset-custody" },
-    { name: "AML / KYC Policy", href: "https://freeman-firms.vercel.app/legal/aml-kyc-policy" },
-    { name: "Refund & Withdrawal Policy", href: "https://freeman-firms.vercel.app/legal/refund-withdrawal-policy" },
-    { name: "Complaints Procedure", href: "https://freeman-firms.vercel.app/legal/complaints-procedure" },
-    { name: "Conflicts of Interest Policy", href: "https://freeman-firms.vercel.app/legal/conflicts-of-interest" },
-    { name: "Cookie Policy", href: "https://freeman-firms.vercel.app/legal/cookie-policy" },
-    { name: "Subprocessor List", href: "https://freeman-firms.vercel.app/legal/subprocessors" },
-  ];
-
   return (
     <footer className="w-full bg-[#a500a3] text-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 sm:gap-10 px-4 sm:px-6 py-10 sm:py-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_2fr_1fr]">
-        {/* Company & Disclaimer */}
-        <div className="flex flex-col gap-3">
+      <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl px-4 sm:px-6 py-10 sm:py-12">
+        {/* Company & Description */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-3 max-w-md">
           <a aria-label="Freemann Firms home" href="/" className="flex items-center gap-2">
             <div className="relative h-10 w-36 sm:h-8">
               <Image
                 src="/images/logo.png"
                 alt="Freemann Firms"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-center md:object-left"
               />
             </div>
           </a>
           <p className="text-sm font-semibold opacity-95">Freemann Firms Integrated Services Ltd.</p>
-          <p className="max-w-xs text-xs leading-relaxed opacity-80">
-            Investing carries risk. Your capital is at risk and you may get back less than you invest. Not a bank deposit and not covered by any deposit insurance or investor compensation scheme.
+          <p className="text-xs leading-relaxed opacity-85">
+            A unified fintech ecosystem empowering individuals and businesses through crypto-powered investment management, peer-to-peer trading rails, professional academy education, and universal online commerce.
           </p>
         </div>
 
-        {/* Legal Links */}
-        <nav aria-labelledby="footer-legal">
-          <h2 id="footer-legal" className="mb-3 text-xs sm:text-sm font-bold uppercase tracking-wider opacity-90">
-            Legal & Compliance
-          </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
-            {legalLinks.map((item, idx) => (
-              <li key={idx}>
-                <a
-                  className="text-xs sm:text-sm opacity-90 hover:opacity-100 transition-opacity flex items-center py-0.5 hover:underline underline-offset-4"
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
         {/* Social Links */}
-        <nav aria-labelledby="footer-social">
-          <h2 id="footer-social" className="mb-3 text-xs sm:text-sm font-bold uppercase tracking-wider opacity-90">
+        <div className="flex flex-col items-center md:items-end text-center md:text-right gap-3">
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-wider opacity-90">
             Social & Community
-          </h2>
+          </span>
           <div className="flex gap-4">
             {/* X / Twitter */}
             <a
@@ -104,21 +68,13 @@ export function Footer() {
               </svg>
             </a>
           </div>
-        </nav>
+        </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/20">
-        <div className="mx-auto flex w-full max-w-6xl flex-col sm:flex-row items-center justify-between gap-2 px-4 sm:px-6 py-4 text-xs opacity-85 text-center sm:text-left">
-          <p>© 2026 Freemann Firms Integrated Services Ltd. All rights reserved.</p>
-          <a
-            className="underline-offset-4 hover:underline"
-            href="https://freeman-firms.vercel.app/legal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            All legal documents
-          </a>
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-4 sm:px-6 py-4 text-xs opacity-85 text-center">
+          <p>© {new Date().getFullYear()} Freemann Firms Integrated Services Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

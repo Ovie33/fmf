@@ -9,6 +9,7 @@ import {
   Users2,
   GraduationCap,
   ShoppingBag,
+  ArrowUpRight,
 } from "lucide-react";
 
 export function PortalHero() {
@@ -24,20 +25,20 @@ export function PortalHero() {
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 sm:gap-12">
         {/* Left Column: Ecosystem Content */}
         <div className="flex-1 text-center lg:text-left w-full">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#a500a3]/10 border border-[#a500a3]/20 text-[#a500a3] font-semibold text-[11px] sm:text-xs mb-4 sm:mb-6">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#a500a3]/10 border border-[#a500a3]/20 text-[#a500a3] font-semibold text-[11px] sm:text-xs mb-4 sm:mb-6">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>UNIFIED SOLAR ECOSYSTEM</span>
+            <span>THE FREEMANN FIRMS ECOSYSTEM</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#18181b] leading-tight mb-4 sm:mb-6">
-            One Gateway.{" "}
+            The Unified Ecosystem for{" "}
             <span className="text-[#a500a3] block sm:inline">
-              Every Financial Frontier.
+              Modern Wealth & Trade.
             </span>
           </h1>
 
           <p className="text-xs sm:text-base text-[#52525b] leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-            Welcome to the Freemann Firms Ecosystem. Seamlessly navigate between our high-yield investment platform, secure P2P trading, 1-on-1 Forex Academy, and universal online market.
+            Explore the interconnected Freemann Firms ecosystem — seamlessly powering crypto-driven fund management, direct P2P exchange rails, 1-on-1 Forex trading mentorship, and universal online commerce in one unified gateway.
           </p>
 
           {/* Quick Jump Buttons - In Correct Order */}
@@ -63,16 +64,17 @@ export function PortalHero() {
               href="#services"
               className="btn-primary h-12 sm:h-11 px-6 rounded-[9px] text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#a500a3]/20 w-full sm:w-auto active:scale-98"
             >
-              <span>Explore 4 Products</span>
+              <span>Explore All Products</span>
               <ArrowDown className="w-4 h-4" />
             </a>
             <a
               href="https://freeman-firms.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 sm:h-11 px-5 rounded-[9px] text-sm font-semibold text-[#18181b] border border-[#e4e4e7] bg-white hover:bg-[#f4f4f5] transition-colors flex items-center justify-center shadow-xs w-full sm:w-auto active:scale-98"
+              className="h-12 sm:h-11 px-5 rounded-[9px] text-sm font-semibold text-[#18181b] border border-[#e4e4e7] bg-white hover:bg-[#f4f4f5] transition-colors flex items-center justify-center gap-1 shadow-xs w-full sm:w-auto active:scale-98"
             >
-              Launch Investment App
+              <span>Launch Investment App</span>
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
         </div>
