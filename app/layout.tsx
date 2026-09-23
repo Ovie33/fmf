@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AETHER ECOSYSTEM // Architectural Blueprint & Core Protocol",
-  description: "High-performance modular ecosystem architecture, autonomous node infrastructure, and decentralized application suite.",
+  title: "FREEMAN FIRMS // Ecosystem Architecture",
+  description: "The unified modular solar ecosystem architecture for Freeman Firms.",
 };
 
 export default function RootLayout({
@@ -27,10 +27,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full bg-[#08090d] text-[#f0f3f8] antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-full bg-[#07050d] text-[#f8fafc] antialiased selection:bg-purple-500/30 selection:text-purple-200">
         {children}
       </body>
     </html>
   );
 }
-

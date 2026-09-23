@@ -21,7 +21,6 @@ export function SolarCanvas({
 }: SolarCanvasProps) {
   const mountRef = useRef<HTMLDivElement>(null);
 
-  // References for Three.js animation loop & objects
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
@@ -30,7 +29,6 @@ export function SolarCanvas({
   const mouseRef = useRef<THREE.Vector2>(new THREE.Vector2());
   const raycasterRef = useRef<THREE.Raycaster>(new THREE.Raycaster());
 
-  // Camera targets for smooth cinematic swooping
   const targetCameraPos = useRef<THREE.Vector3>(new THREE.Vector3(0, 48, 65));
   const targetLookAt = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0));
   const currentLookAt = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0));
@@ -59,12 +57,16 @@ export function SolarCanvas({
     rendererRef.current = renderer;
 
     // 3. LIGHTING
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xf5f3ff, 0.6);
     scene.add(ambientLight);
 
-    const sunPointLight = new THREE.PointLight(0xffeedd, 3.5, 120);
+    const sunPointLight = new THREE.PointLight(0xffffff, 4, 130);
     sunPointLight.position.set(0, 0, 0);
     scene.add(sunPointLight);
+
+    const violetRimLight = new THREE.PointLight(0xa855f7, 2, 100);
+    violetRimLight.position.set(0, 20, 0);
+    scene.add(violetRimLight);
 
     // 4. STARFIELD BACKGROUND
     const starGeometry = new THREE.BufferGeometry();
@@ -79,34 +81,34 @@ export function SolarCanvas({
 
     starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
     const starMaterial = new THREE.PointsMaterial({
-      color: 0x99ccff,
-      size: 0.3,
+      color: 0xddd6fe,
+      size: 0.28,
       transparent: true,
-      opacity: 0.75,
+      opacity: 0.8,
     });
     const starField = new THREE.Points(starGeometry, starMaterial);
     scene.add(starField);
 
-    // 5. CENTRAL SUN (Core Nexus)
+    // 5. CENTRAL SUN (Nexus)
     const sunGeom = new THREE.SphereGeometry(2.3, 32, 32);
     const sunMat = new THREE.MeshStandardMaterial({
-      color: 0xffbb00,
-      emissive: 0xff6600,
-      emissiveIntensity: 1.3,
-      roughness: 0.2,
-      metalness: 0.1,
+      color: 0xffffff,
+      emissive: 0x9333ea,
+      emissiveIntensity: 1.2,
+      roughness: 0.1,
+      metalness: 0.2,
     });
     const sun = new THREE.Mesh(sunGeom, sunMat);
     sun.userData = { planetData: PLANETS[0] };
     scene.add(sun);
     sunMeshRef.current = sun;
 
-    // Glowing Halo Sphere
+    // Glowing Purple Halo
     const haloGeom = new THREE.SphereGeometry(2.8, 32, 32);
     const haloMat = new THREE.MeshBasicMaterial({
-      color: 0xffaa00,
+      color: 0xc084fc,
       transparent: true,
-      opacity: 0.22,
+      opacity: 0.28,
       side: THREE.BackSide,
     });
     const halo = new THREE.Mesh(haloGeom, haloMat);
@@ -135,9 +137,9 @@ export function SolarCanvas({
       const planetMat = new THREE.MeshStandardMaterial({
         color: new THREE.Color(planet.color),
         emissive: new THREE.Color(planet.glowColor),
-        emissiveIntensity: 0.4,
-        roughness: 0.35,
-        metalness: 0.6,
+        emissiveIntensity: 0.45,
+        roughness: 0.3,
+        metalness: 0.7,
       });
       const planetMesh = new THREE.Mesh(planetGeom, planetMat);
 
@@ -149,14 +151,14 @@ export function SolarCanvas({
       );
       planetMesh.userData = { planetData: planet };
 
-      // Optional Planetary Ring
+      // Optional Ring
       if (planet.hasRing && planet.ringColor) {
         const ringGeom = new THREE.RingGeometry(planet.size * 1.4, planet.size * 2.3, 32);
         const ringMat = new THREE.MeshBasicMaterial({
           color: new THREE.Color(planet.ringColor),
           side: THREE.DoubleSide,
           transparent: true,
-          opacity: 0.65,
+          opacity: 0.75,
         });
         const ringMesh = new THREE.Mesh(ringGeom, ringMat);
         ringMesh.rotation.x = Math.PI / 2.3;
@@ -242,20 +244,16 @@ export function SolarCanvas({
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
 
-      // Interpolate camera smoothly towards target
       camera.position.lerp(targetCameraPos.current, 0.04);
       currentLookAt.current.lerp(targetLookAt.current, 0.04);
       camera.lookAt(currentLookAt.current);
 
-      // Sun rotation
       if (sunMeshRef.current) {
         sunMeshRef.current.rotation.y += 0.005;
       }
 
-      // Starfield drift
       starField.rotation.y += 0.0003;
 
-      // Planets revolution
       planetMeshesRef.current.forEach((item) => {
         item.mesh.rotation.y += 0.02;
 
@@ -279,12 +277,12 @@ export function SolarCanvas({
     };
   }, [isRotating, orbitSpeedFactor, onHoverPlanet, onSelectPlanet]);
 
-  // Adjust camera target based on Explore state
   useEffect(() => {
     if (hasExplored) {
-      targetCameraPos.current.set(0, 22, 34);
+      targetCameraPos.current.set(0, 26, 38);
       targetLookAt.current.set(0, 0, 0);
     } else {
+      // Original overview perspective showing planets & orbits directly
       targetCameraPos.current.set(0, 48, 65);
       targetLookAt.current.set(0, 0, 0);
     }
