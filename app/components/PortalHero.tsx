@@ -6,18 +6,17 @@ import {
   ArrowDown,
   Sparkles,
   TrendingUp,
-  ShoppingBag,
-  GraduationCap,
   Users2,
-  ArrowUpRight,
+  GraduationCap,
+  ShoppingBag,
 } from "lucide-react";
 
 export function PortalHero() {
   const quickLinks = [
     { label: "1. Investment Platform", icon: TrendingUp, href: "#services" },
-    { label: "2. Online Market", icon: ShoppingBag, href: "#services" },
-    { label: "3. Forex Academy", icon: GraduationCap, href: "#services" },
-    { label: "4. P2P Services", icon: Users2, href: "#services" },
+    { label: "2. P2P Trading", icon: Users2, href: "#services" },
+    { label: "3. Academy", icon: GraduationCap, href: "#services" },
+    { label: "4. Online Market", icon: ShoppingBag, href: "#services" },
   ];
 
   return (
@@ -27,7 +26,7 @@ export function PortalHero() {
         <div className="flex-1 text-center lg:text-left w-full">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#a500a3]/10 border border-[#a500a3]/20 text-[#a500a3] font-semibold text-[11px] sm:text-xs mb-4 sm:mb-6">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>UNIFIED PRODUCT ECOSYSTEM</span>
+            <span>UNIFIED SOLAR ECOSYSTEM</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#18181b] leading-tight mb-4 sm:mb-6">
@@ -38,10 +37,10 @@ export function PortalHero() {
           </h1>
 
           <p className="text-xs sm:text-base text-[#52525b] leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-            Welcome to the Freemann Firms Ecosystem. Seamlessly navigate between our high-yield investment platform, universal online trading market, 1-on-1 Forex Academy, and secure P2P services.
+            Welcome to the Freemann Firms Ecosystem. Seamlessly navigate between our high-yield investment platform, secure P2P trading, 1-on-1 Forex Academy, and universal online market.
           </p>
 
-          {/* Quick Jump Buttons - Mobile Touch Friendly */}
+          {/* Quick Jump Buttons - In Correct Order */}
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-2 mb-6 sm:mb-8">
             {quickLinks.map((item, idx) => {
               const Icon = item.icon;
@@ -78,14 +77,15 @@ export function PortalHero() {
           </div>
         </div>
 
-        {/* Right Column: Storyset Globe Search 2D Illustration */}
+        {/* Right Column: Freemann Firms Solar Ecosystem 2D Illustration */}
         <div className="w-full lg:w-[480px] flex items-center justify-center shrink-0">
-          <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] aspect-square rounded-3xl bg-white p-4 border border-[#e4e4e7] shadow-xl transition-all">
+          <div className="relative w-full max-w-[300px] sm:max-w-[380px] lg:max-w-[440px] aspect-square rounded-3xl bg-white p-4 border border-[#e4e4e7] shadow-xl hover:shadow-2xl transition-all group">
             <Image
-              src="/images/globe-search.png"
-              alt="Exploring the Freemann Firms Global Ecosystem"
+              src="/images/solar-ecosystem.png"
+              alt="Freemann Firms Solar System Ecosystem Architecture"
               fill
-              className="object-contain p-2"
+              sizes="(max-width: 768px) 100vw, 440px"
+              className="object-contain p-2 group-hover:scale-105 transition-transform"
               priority
             />
           </div>

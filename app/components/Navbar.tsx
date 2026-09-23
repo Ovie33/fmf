@@ -27,19 +27,19 @@ export function Navbar() {
         </a>
       </div>
 
-      {/* Desktop Nav Links */}
+      {/* Desktop Nav Links in Exact Order */}
       <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium text-[#52525b]">
         <a href="#services" className="hover:text-[#a500a3] transition-colors">
           Investment Platform
         </a>
         <a href="#services" className="hover:text-[#a500a3] transition-colors">
+          P2P Trading
+        </a>
+        <a href="#services" className="hover:text-[#a500a3] transition-colors">
+          Academy
+        </a>
+        <a href="#services" className="hover:text-[#a500a3] transition-colors">
           Online Market
-        </a>
-        <a href="#services" className="hover:text-[#a500a3] transition-colors">
-          Forex Academy
-        </a>
-        <a href="#services" className="hover:text-[#a500a3] transition-colors">
-          P2P Services
         </a>
       </nav>
 
@@ -65,7 +65,7 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer Overlay */}
+      {/* Mobile Drawer Overlay in Exact Order */}
       {mobileOpen && (
         <div className="absolute top-16 left-0 w-full bg-white border-b border-[#e4e4e7] p-5 flex flex-col gap-3.5 lg:hidden shadow-xl animate-in slide-in-from-top-2">
           <span className="text-[11px] font-bold uppercase tracking-wider text-[#71717a] px-1">
@@ -84,15 +84,15 @@ export function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>2. Online Market</span>
-            <span className="text-[10px] text-[#a500a3] bg-[#a500a3]/10 px-2 py-0.5 rounded font-bold">Soon</span>
+            <span>2. P2P Trading</span>
+            <span className="text-[10px] text-purple-600 bg-purple-50 px-2 py-0.5 rounded font-bold">WhatsApp</span>
           </a>
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
             className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>3. Forex Academy</span>
+            <span>3. Academy</span>
             <span className="text-[10px] text-blue-600 bg-blue-50 px-2 py-0.5 rounded font-bold">Mentorship</span>
           </a>
           <a
@@ -100,8 +100,8 @@ export function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>4. P2P Services</span>
-            <span className="text-[10px] text-purple-600 bg-purple-50 px-2 py-0.5 rounded font-bold">Escrow</span>
+            <span>4. Online Market</span>
+            <span className="text-[10px] text-[#a500a3] bg-[#a500a3]/10 px-2 py-0.5 rounded font-bold">Soon</span>
           </a>
 
           <div className="pt-3 border-t border-[#e4e4e7] flex items-center gap-2">

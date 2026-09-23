@@ -62,33 +62,33 @@ export function PortalServices() {
       actionText: "Launch Investment App",
     },
     {
-      id: "market",
+      id: "p2p",
       number: "02",
-      title: "Freemann Online Market",
-      tagline: "The universal marketplace where anything and everything can be traded",
-      badge: "COMING SOON",
-      badgeColor: "bg-[#a500a3]/10 text-[#a500a3] border-[#a500a3]/30",
+      title: "Freemann P2P Trading",
+      tagline: "Direct peer-to-peer crypto & fiat exchange with zero escrow fees",
+      badge: "ACTIVE SERVICE",
+      badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
       dotColor: "bg-[#a500a3]",
-      desc: "A next-generation universal marketplace and exchange. Trade physical goods, digital assets, commodities, and professional services with escrow-backed protection and instant settlement.",
-      illustration: "/images/withdraw.png",
-      isLive: false,
+      desc: "Buy, sell, and swap crypto directly with verified peers in your local currency. Protected by cryptographic smart escrow, 0% platform trading fees, and direct merchant support on WhatsApp.",
+      illustration: "/images/deposit.png",
+      isLive: true,
       metrics: [
-        { label: "Asset Scope", value: "Universal" },
-        { label: "Settlement", value: "Escrow-Backed" },
-        { label: "Status", value: "Private Beta" },
+        { label: "Escrow Fee", value: "0% Maker Fee" },
+        { label: "Settlement", value: "Instant P2P" },
+        { label: "Support", value: "WhatsApp Desk" },
       ],
       features: [
-        "Trade anything from physical products to digital commodities",
-        "Automated cryptographic escrow protects buyer and seller",
-        "Zero-friction payment integration across fiat and crypto",
+        "Direct buyer-to-seller transfers with automated escrow protection",
+        "Multiple local payment rails (Bank transfer, Mobile Money, Cash)",
+        "Direct trade execution and merchant support via WhatsApp",
       ],
-      actionType: "waitlist",
-      actionText: "Join Early Access Waitlist",
+      actionType: "p2p_contact",
+      actionText: "Contact P2P on WhatsApp",
     },
     {
       id: "academy",
       number: "03",
-      title: "Freemann Forex Academy",
+      title: "Freemann Academy",
       tagline: "Master profitable trading with direct 1-on-1 mentorship",
       badge: "ENROLLMENT OPEN",
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
@@ -110,28 +110,28 @@ export function PortalServices() {
       actionText: "Enroll / Contact Academy",
     },
     {
-      id: "p2p",
+      id: "market",
       number: "04",
-      title: "Freemann P2P Services",
-      tagline: "Direct peer-to-peer crypto & fiat exchange with zero escrow fees",
-      badge: "ACTIVE SERVICE",
-      badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
+      title: "Freemann Online Market",
+      tagline: "The universal marketplace where anything and everything can be traded",
+      badge: "COMING SOON",
+      badgeColor: "bg-[#a500a3]/10 text-[#a500a3] border-[#a500a3]/30",
       dotColor: "bg-[#a500a3]",
-      desc: "Buy, sell, and swap crypto directly with verified peers in your local currency. Protected by cryptographic smart escrow, 0% platform trading fees, and direct assistance on WhatsApp.",
-      illustration: "/images/deposit.png",
-      isLive: true,
+      desc: "A next-generation universal marketplace and exchange. Trade physical goods, digital assets, commodities, and professional services with escrow-backed protection and instant settlement.",
+      illustration: "/images/withdraw.png",
+      isLive: false,
       metrics: [
-        { label: "Escrow Fee", value: "0% Maker Fee" },
-        { label: "Settlement", value: "Instant P2P" },
-        { label: "Support", value: "WhatsApp Desk" },
+        { label: "Asset Scope", value: "Universal" },
+        { label: "Settlement", value: "Escrow-Backed" },
+        { label: "Status", value: "Private Beta" },
       ],
       features: [
-        "Direct buyer-to-seller transfers with automated escrow protection",
-        "Multiple local payment rails (Bank transfer, Mobile Money, Cash)",
-        "Direct trade execution and merchant support via WhatsApp",
+        "Trade anything from physical products to digital commodities",
+        "Automated cryptographic escrow protects buyer and seller",
+        "Zero-friction payment integration across fiat and crypto",
       ],
-      actionType: "p2p_contact",
-      actionText: "Contact P2P on WhatsApp",
+      actionType: "waitlist",
+      actionText: "Join Early Access Waitlist",
     },
   ];
 
@@ -152,7 +152,7 @@ export function PortalServices() {
           </p>
         </div>
 
-        {/* 4 Products List */}
+        {/* 4 Products List in Exact Order */}
         <div className="space-y-6 sm:space-y-8">
           {products.map((p) => (
             <div
@@ -228,38 +228,6 @@ export function PortalServices() {
                       </a>
                     )}
 
-                    {p.actionType === "waitlist" && (
-                      <button
-                        onClick={() => setWaitlistModalOpen(true)}
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-6 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto cursor-pointer active:scale-98"
-                      >
-                        <Clock className="w-4 h-4" />
-                        <span>{p.actionText}</span>
-                      </button>
-                    )}
-
-                    {p.actionType === "academy_contact" && (
-                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
-                        <a
-                          href="https://wa.me/?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Forex%20Academy."
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all w-full sm:w-auto active:scale-98"
-                        >
-                          <MessageCircle className="w-4 h-4" />
-                          <span>Contact via WhatsApp</span>
-                        </a>
-
-                        <button
-                          onClick={() => setAcademyModalOpen(true)}
-                          className="bg-white border border-[#e4e4e7] hover:border-[#a500a3] text-[#18181b] hover:text-[#a500a3] inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-xs transition-all w-full sm:w-auto cursor-pointer active:scale-98"
-                        >
-                          <Mail className="w-4 h-4 text-[#a500a3]" />
-                          <span>Reach Out via Email</span>
-                        </button>
-                      </div>
-                    )}
-
                     {p.actionType === "p2p_contact" && (
                       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
                         <a
@@ -282,6 +250,38 @@ export function PortalServices() {
                           <ArrowUpRight className="w-4 h-4" />
                         </a>
                       </div>
+                    )}
+
+                    {p.actionType === "academy_contact" && (
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
+                        <a
+                          href="https://wa.me/?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Academy."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all w-full sm:w-auto active:scale-98"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          <span>Contact via WhatsApp</span>
+                        </a>
+
+                        <button
+                          onClick={() => setAcademyModalOpen(true)}
+                          className="bg-white border border-[#e4e4e7] hover:border-[#a500a3] text-[#18181b] hover:text-[#a500a3] inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-5 rounded-[9px] text-xs sm:text-sm font-semibold shadow-xs transition-all w-full sm:w-auto cursor-pointer active:scale-98"
+                        >
+                          <Mail className="w-4 h-4 text-[#a500a3]" />
+                          <span>Reach Out via Email</span>
+                        </button>
+                      </div>
+                    )}
+
+                    {p.actionType === "waitlist" && (
+                      <button
+                        onClick={() => setWaitlistModalOpen(true)}
+                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 sm:h-11 px-6 rounded-[9px] text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto cursor-pointer active:scale-98"
+                      >
+                        <Clock className="w-4 h-4" />
+                        <span>{p.actionText}</span>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export function PortalServices() {
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-[#18181b]">
-                  Freemann Forex Academy
+                  Freemann Academy
                 </h3>
                 <p className="text-[11px] sm:text-xs text-[#71717a]">
                   Direct mentorship enrollment & signal access
@@ -334,7 +334,7 @@ export function PortalServices() {
 
             <div className="space-y-2.5 mb-5">
               <a
-                href="https://wa.me/?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20am%20interested%20in%20joining%20the%20Forex%20Academy."
+                href="https://wa.me/?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20am%20interested%20in%20joining%20the%20Academy."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-between p-3.5 rounded-xl border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 transition-all text-xs sm:text-sm font-semibold"
@@ -347,7 +347,7 @@ export function PortalServices() {
               </a>
 
               <a
-                href="mailto:academy@freemannfirms.com?subject=Forex%20Academy%20Enrollment%20Inquiry"
+                href="mailto:academy@freemannfirms.com?subject=Academy%20Enrollment%20Inquiry"
                 className="w-full flex items-center justify-between p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] hover:bg-[#f4f4f5] text-[#18181b] transition-all text-xs sm:text-sm font-semibold"
               >
                 <div className="flex items-center gap-2.5 truncate">
