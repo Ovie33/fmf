@@ -30,13 +30,13 @@ export function Navbar() {
       {/* Desktop Nav Links in Exact Order */}
       <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium text-[#52525b]">
         <a href="#services" className="hover:text-[#a500a3] transition-colors">
-          Investment Platform
-        </a>
-        <a href="#services" className="hover:text-[#a500a3] transition-colors">
-          P2P Trading
+          Investments
         </a>
         <a href="#services" className="hover:text-[#a500a3] transition-colors">
           Academy
+        </a>
+        <a href="#services" className="hover:text-[#a500a3] transition-colors">
+          P2P
         </a>
         <a href="#services" className="hover:text-[#a500a3] transition-colors">
           Online Market
@@ -49,10 +49,10 @@ export function Navbar() {
           href="https://freeman-firms.vercel.app/register"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary h-9 px-3.5 sm:px-4 rounded-[9px] text-xs sm:text-sm font-semibold flex items-center gap-1 shadow-md shadow-[#a500a3]/20"
+          className="btn-primary h-10 px-4 rounded-[9px] text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/20 active:scale-95"
         >
           <span>Launch App</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <ArrowUpRight className="w-4 h-4" />
         </a>
 
         {/* Mobile Menu Button */}
@@ -61,47 +61,47 @@ export function Navbar() {
           className="lg:hidden p-2 rounded-lg text-[#52525b] hover:text-[#18181b] hover:bg-[#f4f4f5] transition-colors"
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Drawer Overlay in Exact Order */}
       {mobileOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white border-b border-[#e4e4e7] p-5 flex flex-col gap-3.5 lg:hidden shadow-xl animate-in slide-in-from-top-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#71717a] px-1">
+        <div className="absolute top-16 left-0 w-full bg-white border-b border-[#e4e4e7] p-5 flex flex-col gap-3 lg:hidden shadow-xl animate-in slide-in-from-top-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#71717a] px-1">
             Ecosystem Products
           </span>
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
+            className="text-base font-semibold text-[#18181b] hover:text-[#a500a3] p-2.5 rounded-xl hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>1. Investment Platform</span>
-            <span className="text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-bold">Live</span>
+            <span>1. Freemann Firms Investments</span>
+            <span className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full font-bold">Live</span>
           </a>
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
+            className="text-base font-semibold text-[#18181b] hover:text-[#a500a3] p-2.5 rounded-xl hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>2. P2P Trading</span>
-            <span className="text-[10px] text-purple-600 bg-purple-50 px-2 py-0.5 rounded font-bold">WhatsApp</span>
+            <span>2. Freemann Firms Academy</span>
+            <span className="text-xs text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-full font-bold">Open</span>
           </a>
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
+            className="text-base font-semibold text-[#18181b] hover:text-[#a500a3] p-2.5 rounded-xl hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>3. Academy</span>
-            <span className="text-[10px] text-blue-600 bg-blue-50 px-2 py-0.5 rounded font-bold">Mentorship</span>
+            <span>3. Freemann Firms P2P</span>
+            <span className="text-xs text-purple-700 bg-purple-50 border border-purple-200 px-2.5 py-0.5 rounded-full font-bold">Active</span>
           </a>
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-sm font-semibold text-[#18181b] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] transition-colors flex items-center justify-between"
+            className="text-base font-semibold text-[#18181b] hover:text-[#a500a3] p-2.5 rounded-xl hover:bg-[#fafafa] transition-colors flex items-center justify-between"
           >
-            <span>4. Online Market</span>
-            <span className="text-[10px] text-[#a500a3] bg-[#a500a3]/10 px-2 py-0.5 rounded font-bold">Soon</span>
+            <span>4. Freemann Firms Online Market</span>
+            <span className="text-xs text-[#a500a3] bg-[#a500a3]/10 border border-[#a500a3]/20 px-2.5 py-0.5 rounded-full font-bold">Soon</span>
           </a>
 
           <div className="pt-3 border-t border-[#e4e4e7] flex items-center gap-2">
@@ -109,7 +109,7 @@ export function Navbar() {
               href="https://freeman-firms.vercel.app/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-10 flex-1 rounded-[9px] text-xs font-semibold text-center text-[#18181b] border border-[#e4e4e7] flex items-center justify-center hover:bg-[#f4f4f5]"
+              className="h-11 flex-1 rounded-[9px] text-sm font-semibold text-center text-[#18181b] border border-[#e4e4e7] flex items-center justify-center hover:bg-[#f4f4f5]"
             >
               Log In
             </a>
@@ -117,7 +117,7 @@ export function Navbar() {
               href="https://freeman-firms.vercel.app/register"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary h-10 flex-1 rounded-[9px] text-xs font-semibold text-center flex items-center justify-center shadow-md shadow-[#a500a3]/20"
+              className="btn-primary h-11 flex-1 rounded-[9px] text-sm font-semibold text-center flex items-center justify-center shadow-md shadow-[#a500a3]/20"
             >
               Get Started
             </a>

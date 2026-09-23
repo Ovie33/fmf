@@ -19,8 +19,8 @@ export function Footer() {
               />
             </div>
           </a>
-          <p className="text-sm font-semibold opacity-95">Freemann Firms Integrated Services Ltd.</p>
-          <p className="text-xs leading-relaxed opacity-85">
+          <p className="text-base font-bold opacity-95">Freemann Firms Integrated Services Ltd.</p>
+          <p className="text-sm leading-relaxed opacity-90">
             A unified fintech ecosystem empowering individuals and businesses through crypto-powered investment management, peer-to-peer trading rails, professional academy education, and universal online commerce.
           </p>
         </div>
@@ -73,7 +73,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/20">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-4 sm:px-6 py-4 text-xs opacity-85 text-center">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-4 sm:px-6 py-4 text-xs sm:text-sm opacity-90 text-center">
           <p>© {new Date().getFullYear()} Freemann Firms Integrated Services Ltd. All rights reserved.</p>
         </div>
       </div>

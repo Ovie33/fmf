@@ -26,10 +26,10 @@ export function PortalArchitecture() {
     <section id="architecture" className="w-full bg-white py-12 sm:py-16 border-t border-b border-[#e4e4e7] px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-3xl font-bold text-[#18181b] mb-2 sm:mb-3">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#18181b] mb-3">
             Why the <span className="text-[#a500a3]">Freemann Firms Ecosystem</span>?
           </h2>
-          <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed max-w-2xl mx-auto">
             Engineered from the ground up to give investors total control, transparent returns, and uncompromising asset security across all digital financial services.
           </p>
         </div>
@@ -38,9 +38,9 @@ export function PortalArchitecture() {
           {pillars.map((p, idx) => (
             <div
               key={idx}
-              className="bg-[#fafafa] border border-[#e4e4e7] hover:border-[#a500a3]/50 rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center transition-all hover:shadow-md group"
+              className="bg-[#fafafa] border border-[#e4e4e7] hover:border-[#a500a3]/50 rounded-2xl p-6 flex flex-col items-center text-center transition-all hover:shadow-md group"
             >
-              <div className="relative h-12 w-12 sm:h-14 sm:w-14 mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+              <div className="relative h-14 w-14 mb-4 group-hover:scale-110 transition-transform">
                 <Image
                   src={p.img}
                   alt={p.title}
@@ -48,10 +48,10 @@ export function PortalArchitecture() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-[#18181b] mb-1.5 sm:mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-[#18181b] mb-2">
                 {p.title}
               </h3>
-              <p className="text-xs text-[#52525b] leading-relaxed">
+              <p className="text-sm text-[#52525b] leading-relaxed">
                 {p.desc}
               </p>
             </div>
