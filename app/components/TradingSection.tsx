@@ -39,7 +39,7 @@ export function TradingSection() {
                 />
               </div>
               <a
-                href="https://freeman-firms.vercel.app/register"
+                href="https://www.freemannfirms.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary h-11 px-8 rounded-[9px] text-sm font-semibold flex items-center justify-center shadow-lg shadow-[#a500a3]/20 w-full sm:w-auto"

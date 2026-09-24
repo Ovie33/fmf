@@ -28,7 +28,7 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <a
-              href="https://freeman-firms.vercel.app/register"
+              href="https://www.freemannfirms.com"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary h-12 px-8 rounded-[9px] text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#a500a3]/25 w-full sm:w-auto"

@@ -6,30 +6,31 @@ import Image from "next/image";
 export function PortalArchitecture() {
   const pillars = [
     {
-      img: "/images/fee.png",
-      title: "1. Unified Identity & Access",
-      desc: "One secure account unlocks all Freemann Firms services, from crypto wealth management to universal marketplace and P2P trading.",
+      img: "/images/growth.png",
+      title: "1. Building Wealth Made Easy",
+      desc: "Grow your Capital through our performance-based investment pools. One-on-one mentorship through Freemann Firms Academy. Trade your digital assets directly through our P2P Merchant System.",
     },
     {
-      img: "/images/growth.png",
-      title: "2. Performance-First Yield",
-      desc: "Zero hidden management fees. Fund managers only earn when you make verifiable profits, backed by strict stop-loss caps.",
+      img: "/images/fee.png",
+      title: "2. You Win. We Earn.",
+      highlight: "Zero hidden fees.",
+      desc: "Fund managers only profit when you profit. Verifiable returns. Strict stop-loss caps. Transparent, performance-aligned incentives.",
     },
     {
       img: "/images/secure.png",
-      title: "3. 100% Client Asset Custody",
-      desc: "Segregated multi-signature storage with zero rehypothecation. Your principal remains fully protected and withdrawable 24/7.",
+      title: "3. Your Assets. Protected.",
+      desc: "Multi-signature custody. Principal fully protected we charge AUM fees on investments and performance fees on your profits only. Full access to your funds when investment cycles end.",
     },
   ];
 
   return (
-    <section id="architecture" className="w-full bg-white py-12 sm:py-16 border-t border-b border-[#e4e4e7] px-4 sm:px-6 lg:px-8">
+    <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-12 sm:py-16 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#18181b] mb-3">
-            Why the <span className="text-[#a500a3]">Freemann Firms Ecosystem</span>?
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#18181b] dark:text-white mb-3">
+            Why the <span className="text-[#a500a3] dark:text-[#d600b1]">Freemann Firms Ecosystem</span>?
           </h2>
-          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
             Engineered from the ground up to give investors total control, transparent returns, and uncompromising asset security across all digital financial services.
           </p>
         </div>
@@ -38,12 +39,12 @@ export function PortalArchitecture() {
           {pillars.map((p, idx) => (
             <div
               key={idx}
-              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/70 rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-300 shadow-[0_8px_25px_rgb(0,0,0,0.05)] hover:shadow-[0_16px_35px_-8px_rgba(165,0,163,0.15)] group relative overflow-hidden"
+              className="bg-white dark:bg-[#121215] border-2 border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3]/70 dark:hover:border-[#a500a3] rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-300 shadow-[0_8px_25px_rgb(0,0,0,0.05)] dark:shadow-[0_8px_25px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_35px_-8px_rgba(165,0,163,0.15)] group relative overflow-hidden"
             >
               {/* Refined Top Gradient Line */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-amber-300/80 to-[#680097]" />
 
-              <div className="relative h-16 w-16 mb-4 rounded-2xl bg-[#faf5ff] border border-[#e9d5ff]/60 p-3 shadow-xs flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="relative h-16 w-16 mb-4 rounded-2xl bg-[#faf5ff] dark:bg-[#18181b] border border-[#e9d5ff]/60 dark:border-[#27272a] p-3 shadow-xs flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Image
                   src={p.img}
                   alt={p.title}
@@ -51,10 +52,15 @@ export function PortalArchitecture() {
                   className="object-contain p-2"
                 />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#18181b] mb-2 group-hover:text-[#a500a3] transition-colors">
+              <h3 className="text-base sm:text-lg font-bold text-[#18181b] dark:text-white mb-2 group-hover:text-[#a500a3] dark:group-hover:text-[#d600b1] transition-colors">
                 {p.title}
               </h3>
-              <p className="text-sm text-[#52525b] leading-relaxed">
+              {p.highlight && (
+                <div className="inline-block px-3 py-0.5 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-[#a500a3] dark:text-[#d600b1] font-bold text-xs mb-2">
+                  {p.highlight}
+                </div>
+              )}
+              <p className="text-sm text-[#52525b] dark:text-[#a1a1aa] leading-relaxed">
                 {p.desc}
               </p>
             </div>

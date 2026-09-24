@@ -42,7 +42,8 @@ export function PortalServices() {
       dotColor: "bg-emerald-500",
       desc: "Connect directly with expert fund managers who manage and grow your capital. Only pay performance fees on actual profits with strict loss threshold in place.",
       illustration: "/images/service-investments.jpg",
-      link: "https://freeman-firms.vercel.app",
+      illustrationDark: "/images/service-investments-dark-v2.jpg",
+      link: "https://www.freemannfirms.com",
       isLive: true,
       metrics: [
         { label: "Fee Model", value: "Performance" },
@@ -67,6 +68,7 @@ export function PortalServices() {
       dotColor: "bg-blue-500",
       desc: "Learn high probability Forex & Crypto Trading Strategies directly from Expert Market analysts. We connect with you directly on WhatsApp for a personalized trading experience.",
       illustration: "/images/service-academy.jpg",
+      illustrationDark: "/images/service-academy-dark.jpg",
       isLive: true,
       metrics: [
         { label: "Mentorship", value: "1 on 1" },
@@ -91,6 +93,7 @@ export function PortalServices() {
       dotColor: "bg-[#a500a3]",
       desc: "Buy & Sell Cryptocurrencies directly via WhatsApp, trade Giftcards easily.",
       illustration: "/images/service-p2p.jpg",
+      illustrationDark: "/images/service-p2p-dark-v2.jpg",
       isLive: true,
       metrics: [
         { label: "Service Fees", value: "0.7% on withdrawals" },
@@ -115,6 +118,7 @@ export function PortalServices() {
       dotColor: "bg-[#a500a3]",
       desc: "A next-generation universal marketplace and exchange. Trade physical goods, digital assets, commodities, and professional services with escrow-backed protection and instant settlement.",
       illustration: "/images/service-market.jpg",
+      illustrationDark: "/images/service-market-dark.jpg",
       isLive: false,
       metrics: [
         { label: "Asset Scope", value: "Universal" },
@@ -132,18 +136,18 @@ export function PortalServices() {
   ];
 
   return (
-    <section id="services" className="w-full bg-[#f8fafc] py-12 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#e4e4e7]">
+    <section id="services" className="w-full bg-[#f8fafc] dark:bg-[#09090b] py-12 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#e4e4e7] dark:border-[#27272a] transition-colors duration-200">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#a500a3]/10 border border-[#a500a3]/20 text-[#a500a3] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-[#a500a3] dark:text-[#d600b1] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
             <Sparkles className="w-4 h-4" />
             <span>ECOSYSTEM PILLARS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#18181b] tracking-tight mb-3 sm:mb-4">
-            The Freemann Firms <span className="text-[#a500a3]">Products</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#18181b] dark:text-white tracking-tight mb-3 sm:mb-4">
+            The Freemann Firms <span className="text-[#a500a3] dark:text-[#d600b1]">Products</span>
           </h2>
-          <p className="text-sm sm:text-lg text-[#52525b] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
             A unified suite of financial technology solutions built for investors, traders, businesses, and learners.
           </p>
         </div>
@@ -153,20 +157,20 @@ export function PortalServices() {
           {products.map((p) => (
             <div
               key={p.id}
-              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/70 rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
+              className="bg-white dark:bg-[#121215] border-2 border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3]/70 dark:hover:border-[#a500a3] rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
             >
               {/* Refined Top Gradient Line with Subtle Golden Shimmer */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-amber-300/80 to-[#680097]" />
 
               {/* Ambient Soft Glow Effect */}
-              <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-[#a500a3]/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-[#a500a3]/5 dark:bg-[#a500a3]/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
                 {/* Left Column: Product Details */}
                 <div className="flex-1 w-full">
                   {/* Top Status Badges - Purple with Gold Accent */}
                   <div className="flex items-center gap-2.5 mb-3.5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#a500a3]/10 text-xs font-mono font-extrabold text-[#a500a3] border border-amber-400/50 shadow-xs">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#a500a3]/10 dark:bg-[#a500a3]/20 text-xs font-mono font-extrabold text-[#a500a3] dark:text-[#d600b1] border border-amber-400/50 dark:border-amber-400/40 shadow-xs">
                       <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
                       <span>SERVICE {p.number}</span>
                     </span>
@@ -179,25 +183,25 @@ export function PortalServices() {
                   </div>
 
                   {/* Title & Tagline */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#18181b] group-hover:text-[#a500a3] transition-colors mb-2">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#18181b] dark:text-white group-hover:text-[#a500a3] dark:group-hover:text-[#d600b1] transition-colors mb-2">
                     {p.title}
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-[#a500a3] mb-3 sm:mb-4 leading-snug">
+                  <p className="text-sm sm:text-base font-semibold text-[#a500a3] dark:text-[#d600b1] mb-3 sm:mb-4 leading-snug">
                     {p.tagline}
                   </p>
 
-                  <p className="text-sm sm:text-base text-[#52525b] leading-relaxed mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-4 sm:mb-6">
                     {p.desc}
                   </p>
 
-                  {/* Metric Ribbon - Clean & Sleek */}
-                  <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] border border-[#e4e4e7] shadow-xs mb-5 sm:mb-6">
+                  {/* Metric Ribbon - Clean & Sleek in Dark & Light */}
+                  <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] dark:divide-[#27272a] p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] dark:from-[#18181b] dark:via-[#1e1e24] dark:to-[#18181b] border border-[#e4e4e7] dark:border-[#27272a] shadow-xs mb-5 sm:mb-6">
                     {p.metrics.map((m, mIdx) => (
                       <div key={mIdx} className="px-2 sm:px-3 text-center sm:text-left first:pl-0 last:pr-0">
-                        <span className="text-[10px] sm:text-xs uppercase font-semibold text-[#71717a] block truncate">
+                        <span className="text-[10px] sm:text-xs uppercase font-semibold text-[#71717a] dark:text-[#a1a1aa] block truncate">
                           {m.label}
                         </span>
-                        <span className="text-xs sm:text-sm md:text-base font-bold text-[#18181b] truncate block mt-0.5">
+                        <span className="text-xs sm:text-sm md:text-base font-bold text-[#18181b] dark:text-white truncate block mt-0.5">
                           {m.value}
                         </span>
                       </div>
@@ -209,9 +213,9 @@ export function PortalServices() {
                     {p.features.map((feat, fIdx) => (
                       <li
                         key={fIdx}
-                        className="flex items-start gap-2.5 text-sm sm:text-base text-[#3f3f46]"
+                        className="flex items-start gap-2.5 text-sm sm:text-base text-[#3f3f46] dark:text-[#d4d4d8]"
                       >
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#a500a3] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#a500a3] dark:text-[#d600b1] shrink-0 mt-0.5" />
                         <span className="leading-snug">{feat}</span>
                       </li>
                     ))}
@@ -256,10 +260,10 @@ export function PortalServices() {
                         </a>
 
                         <a
-                          href="mailto:support@freemannfirms.com?subject=Academy%20Enrollment%20Inquiry"
-                          className="bg-white border border-[#e4e4e7] hover:border-[#a500a3] text-[#18181b] hover:text-[#a500a3] inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-xs transition-all w-full sm:w-auto active:scale-98"
+                          href="mailto:support@freemannfirom.com?subject=Academy%20Enrollment%20Inquiry"
+                          className="bg-white dark:bg-[#18181b] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-xs transition-all w-full sm:w-auto active:scale-98"
                         >
-                          <Mail className="w-4 h-4 text-[#a500a3]" />
+                          <Mail className="w-4 h-4 text-[#a500a3] dark:text-[#d600b1]" />
                           <span>REACH OUT VIA MAIL</span>
                         </a>
                       </div>
@@ -277,16 +281,33 @@ export function PortalServices() {
                   </div>
                 </div>
 
-                {/* Right Column: 2D Standalone Illustration */}
+                {/* Right Column: 2D Standalone Illustration with Light & Dark Variants */}
                 <div className="w-full lg:w-[360px] xl:w-[400px] flex items-center justify-center shrink-0 mb-4 lg:mb-0">
-                  <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] aspect-square">
-                    <Image
-                      src={p.illustration}
-                      alt={p.title}
-                      fill
-                      sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
-                      className="object-contain"
-                    />
+                  <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] aspect-square rounded-2xl overflow-hidden group">
+                    {/* Ambient Glow */}
+                    <div className="absolute inset-2 bg-gradient-to-tr from-[#a500a3]/10 via-[#680097]/10 to-transparent dark:from-[#a500a3]/25 dark:via-[#680097]/15 dark:to-transparent rounded-full blur-2xl -z-10 group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
+
+                    {/* Light Mode Illustration */}
+                    <div className="relative w-full h-full block dark:hidden">
+                      <Image
+                        src={p.illustration}
+                        alt={p.title}
+                        fill
+                        sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
+                        className="object-contain rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Dark Mode Illustration */}
+                    <div className="relative w-full h-full hidden dark:block">
+                      <Image
+                        src={p.illustrationDark}
+                        alt={p.title}
+                        fill
+                        sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
+                        className="object-contain rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -297,35 +318,35 @@ export function PortalServices() {
 
       {/* Modal 1: Online Market Waitlist Modal */}
       {waitlistModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#e4e4e7] relative animate-in fade-in zoom-in-95">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-xs">
+          <div className="bg-white dark:bg-[#121215] rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#e4e4e7] dark:border-[#27272a] relative animate-in fade-in zoom-in-95">
             <button
               onClick={() => setWaitlistModalOpen(false)}
-              className="absolute top-4 right-4 p-2 text-[#71717a] hover:text-[#18181b] cursor-pointer"
+              className="absolute top-4 right-4 p-2 text-[#71717a] dark:text-[#a1a1aa] hover:text-[#18181b] dark:hover:text-white cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#a500a3]/10 text-[#a500a3] flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#a500a3]/10 dark:bg-[#a500a3]/20 text-[#a500a3] dark:text-[#d600b1] flex items-center justify-center shrink-0">
                 <ShoppingBag className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#18181b]">
+                <h3 className="text-base sm:text-lg font-bold text-[#18181b] dark:text-white">
                   Freemann Firms Online Market
                 </h3>
-                <span className="text-[10px] font-bold uppercase bg-[#a500a3]/10 text-[#a500a3] px-2 py-0.5 rounded">
+                <span className="text-[10px] font-bold uppercase bg-[#a500a3]/10 dark:bg-[#a500a3]/20 text-[#a500a3] dark:text-[#d600b1] px-2 py-0.5 rounded">
                   Coming Soon
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-[#52525b] leading-relaxed mb-5">
+            <p className="text-xs text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-5">
               Be the first to access the universal marketplace where anything and everything can be traded. Enter your email to receive private beta access:
             </p>
 
             {emailSubmitted ? (
-              <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-center text-xs font-semibold flex items-center justify-center gap-2">
+              <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-center text-xs font-semibold flex items-center justify-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>You are on the priority waitlist! We will notify you at launch.</span>
               </div>
@@ -338,7 +359,7 @@ export function PortalServices() {
                     placeholder="Enter your email address"
                     value={waitlistEmail}
                     onChange={(e) => setWaitlistEmail(e.target.value)}
-                    className="w-full h-11 px-4 rounded-[9px] border border-[#e4e4e7] focus:border-[#a500a3] focus:outline-hidden text-sm bg-white text-[#18181b]"
+                    className="w-full h-11 px-4 rounded-[9px] border border-[#e4e4e7] dark:border-[#27272a] focus:border-[#a500a3] dark:focus:border-[#a500a3] focus:outline-hidden text-sm bg-white dark:bg-[#18181b] text-[#18181b] dark:text-white"
                   />
                 </div>
 

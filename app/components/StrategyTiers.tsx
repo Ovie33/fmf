@@ -118,7 +118,7 @@ export function StrategyTiers() {
               </div>
 
               <a
-                href="https://freeman-firms.vercel.app/register"
+                href="https://www.freemannfirms.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full h-10 rounded-[9px] text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
