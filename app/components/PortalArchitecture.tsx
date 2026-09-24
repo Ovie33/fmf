@@ -38,10 +38,10 @@ export function PortalArchitecture() {
           {pillars.map((p, idx) => (
             <div
               key={idx}
-              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/60 rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-300 shadow-[0_8px_25px_rgb(0,0,0,0.05)] hover:shadow-[0_16px_35px_-8px_rgba(165,0,163,0.15)] group relative overflow-hidden"
+              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/70 rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-300 shadow-[0_8px_25px_rgb(0,0,0,0.05)] hover:shadow-[0_16px_35px_-8px_rgba(165,0,163,0.15)] group relative overflow-hidden"
             >
-              {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-[#680097] to-[#d600b1]" />
+              {/* Refined Top Gradient Line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-amber-300/80 to-[#680097]" />
 
               <div className="relative h-16 w-16 mb-4 rounded-2xl bg-[#faf5ff] border border-[#e9d5ff]/60 p-3 shadow-xs flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Image

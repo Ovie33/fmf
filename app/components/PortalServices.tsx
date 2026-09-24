@@ -41,7 +41,7 @@ export function PortalServices() {
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
       dotColor: "bg-emerald-500",
       desc: "Connect directly with expert fund managers who manage and grow your capital. Only pay performance fees on actual profits with strict loss threshold in place.",
-      illustration: "/images/plan.png",
+      illustration: "/images/service-investments.jpg",
       link: "https://freeman-firms.vercel.app",
       isLive: true,
       metrics: [
@@ -66,7 +66,7 @@ export function PortalServices() {
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       dotColor: "bg-blue-500",
       desc: "Learn high probability Forex & Crypto Trading Strategies directly from Expert Market analysts. We connect with you directly on WhatsApp for a personalized trading experience.",
-      illustration: "/images/trading.png",
+      illustration: "/images/service-academy.jpg",
       isLive: true,
       metrics: [
         { label: "Mentorship", value: "1 on 1" },
@@ -90,7 +90,7 @@ export function PortalServices() {
       badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
       dotColor: "bg-[#a500a3]",
       desc: "Buy & Sell Cryptocurrencies directly via WhatsApp, trade Giftcards easily.",
-      illustration: "/images/deposit.png",
+      illustration: "/images/service-p2p.jpg",
       isLive: true,
       metrics: [
         { label: "Service Fees", value: "0.7% on withdrawals" },
@@ -114,7 +114,7 @@ export function PortalServices() {
       badgeColor: "bg-[#a500a3]/10 text-[#a500a3] border-[#a500a3]/30",
       dotColor: "bg-[#a500a3]",
       desc: "A next-generation universal marketplace and exchange. Trade physical goods, digital assets, commodities, and professional services with escrow-backed protection and instant settlement.",
-      illustration: "/images/withdraw.png",
+      illustration: "/images/service-market.jpg",
       isLive: false,
       metrics: [
         { label: "Asset Scope", value: "Universal" },
@@ -153,10 +153,10 @@ export function PortalServices() {
           {products.map((p) => (
             <div
               key={p.id}
-              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/60 rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
+              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/70 rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
             >
-              {/* Premium Top Gradient Accent Line */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-[#680097] to-[#d600b1]" />
+              {/* Refined Top Gradient Line with Subtle Golden Shimmer */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-amber-300/80 to-[#680097]" />
 
               {/* Ambient Soft Glow Effect */}
               <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-[#a500a3]/5 rounded-full blur-3xl pointer-events-none" />
@@ -164,10 +164,11 @@ export function PortalServices() {
               <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
                 {/* Left Column: Product Details */}
                 <div className="flex-1 w-full">
-                  {/* Top Status Badges */}
+                  {/* Top Status Badges - Purple with Gold Accent */}
                   <div className="flex items-center gap-2.5 mb-3.5">
-                    <span className="px-2.5 py-1 rounded-md bg-[#f4f4f5] text-xs font-mono font-bold text-[#71717a] border border-[#e4e4e7]">
-                      SERVICE {p.number}
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#a500a3]/10 text-xs font-mono font-extrabold text-[#a500a3] border border-amber-400/50 shadow-xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                      <span>SERVICE {p.number}</span>
                     </span>
                     <span
                       className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full border shadow-xs ${p.badgeColor}`}
@@ -189,7 +190,7 @@ export function PortalServices() {
                     {p.desc}
                   </p>
 
-                  {/* Metric Ribbon - Juiced Up Mobile & Desktop */}
+                  {/* Metric Ribbon - Clean & Sleek */}
                   <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] border border-[#e4e4e7] shadow-xs mb-5 sm:mb-6">
                     {p.metrics.map((m, mIdx) => (
                       <div key={mIdx} className="px-2 sm:px-3 text-center sm:text-left first:pl-0 last:pr-0">
@@ -276,14 +277,15 @@ export function PortalServices() {
                   </div>
                 </div>
 
-                {/* Right Column: 2D Storyset Illustration Box */}
-                <div className="w-full lg:w-80 flex items-center justify-center shrink-0">
-                  <div className="relative h-52 w-full max-w-[260px] sm:h-64 sm:max-w-[280px] lg:h-72 lg:max-w-[320px] bg-gradient-to-b from-[#faf5ff]/60 to-[#f4f4f5] rounded-3xl p-3 sm:p-4 border border-[#e9d5ff]/50 shadow-xs">
+                {/* Right Column: 2D Standalone Illustration */}
+                <div className="w-full lg:w-[360px] xl:w-[400px] flex items-center justify-center shrink-0 mb-4 lg:mb-0">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] aspect-square">
                     <Image
                       src={p.illustration}
                       alt={p.title}
                       fill
-                      className="object-contain p-2"
+                      sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
+                      className="object-contain"
                     />
                   </div>
                 </div>
