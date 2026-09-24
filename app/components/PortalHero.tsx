@@ -21,35 +21,35 @@ export function PortalHero() {
   ];
 
   return (
-    <section className="w-full bg-[#fafafa] dark:bg-[#0c0c0e] border-b border-[#e4e4e7] dark:border-[#27272a] py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
+    <section className="w-full bg-[#fafafa] dark:bg-[#0c0c0e] border-b border-[#e4e4e7] dark:border-[#27272a] py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 lg:px-12 transition-colors duration-200">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         {/* Left Column: Ecosystem Content */}
-        <div className="flex-1 text-center lg:text-left w-full">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-[#a500a3] dark:text-[#d600b1] font-semibold text-xs sm:text-sm mb-4 sm:mb-6">
-            <Sparkles className="w-4 h-4" />
+        <div className="flex-1 text-left w-full">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-[#a500a3] dark:text-[#d600b1] font-semibold text-xs sm:text-sm mb-3 sm:mb-5">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>THE FREEMANN FIRMS ECOSYSTEM</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 leading-[1.12] mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 leading-[1.12] mb-3 sm:mb-5">
             The Unified Ecosystem for{" "}
             <span className="text-[#a500a3] dark:text-[#d600b1] block sm:inline">
               Modern Wealth & Trade.
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base md:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-5 sm:mb-7 max-w-xl">
             Explore the interconnected Freemann Firms ecosystem seamlessly powering crypto-driven fund management, direct P2P exchange rails, 1-on-1 Forex trading mentorship, and universal online commerce in one unified gateway.
           </p>
 
           {/* Quick Jump Buttons - Uppercase & Bold Pills */}
-          <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-6 sm:mb-8">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-start gap-2 sm:gap-2.5 mb-5 sm:mb-7">
             {quickLinks.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <a
                   key={idx}
                   href={item.href}
-                  className="px-4 py-2 rounded-full bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-xs font-bold uppercase tracking-wider text-[#18181b] dark:text-[#f4f4f5] flex items-center justify-center sm:justify-start gap-2 transition-all hover:bg-[#fafafa] dark:hover:bg-[#202025] shadow-xs hover:shadow-sm active:scale-95"
+                  className="px-3.5 py-2 rounded-full bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#18181b] dark:text-[#f4f4f5] flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 transition-all hover:bg-[#fafafa] dark:hover:bg-[#202025] shadow-xs hover:shadow-sm active:scale-95"
                 >
                   <Icon className="w-3.5 h-3.5 text-[#a500a3] dark:text-[#d600b1] shrink-0" />
                   <span className="truncate">{item.label}</span>
@@ -59,10 +59,10 @@ export function PortalHero() {
           </div>
 
           {/* CTAs - MadeInBlacc Style Pill Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-3 w-full">
             <a
               href="#services"
-              className="bg-[#a500a3] hover:bg-[#850083] text-white h-12 px-8 rounded-full text-sm sm:text-base font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#a500a3]/25 hover:shadow-xl hover:shadow-[#a500a3]/35 transition-all w-full sm:w-auto active:scale-95"
+              className="bg-[#a500a3] hover:bg-[#850083] text-white h-11 sm:h-12 px-7 sm:px-8 rounded-full text-xs sm:text-sm md:text-base font-bold flex items-center justify-center gap-2 shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all w-full sm:w-auto active:scale-95"
             >
               <span>Explore All Products</span>
               <ArrowDown className="w-4 h-4" />
@@ -71,7 +71,7 @@ export function PortalHero() {
               href="https://www.freemannfirms.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 px-8 rounded-full text-sm sm:text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] bg-white dark:bg-[#141418] hover:bg-[#f4f4f5] dark:hover:bg-[#202025] transition-all flex items-center justify-center gap-1.5 shadow-xs w-full sm:w-auto active:scale-95"
+              className="h-11 sm:h-12 px-7 sm:px-8 rounded-full text-xs sm:text-sm md:text-base font-bold text-[#18181b] dark:text-[#f4f4f5] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] bg-white dark:bg-[#141418] hover:bg-[#f4f4f5] dark:hover:bg-[#202025] transition-all flex items-center justify-center gap-1.5 shadow-xs w-full sm:w-auto active:scale-95"
             >
               <span>Launch Investment App</span>
               <ArrowUpRight className="w-4 h-4" />

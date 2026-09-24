@@ -10,77 +10,79 @@ export function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="flex min-h-16 w-full items-center justify-between border-b border-[#e4e4e7] dark:border-[#27272a] bg-white/95 dark:bg-[#09090b]/95 backdrop-blur-md px-4 sm:px-6 md:px-8 text-[#18181b] dark:text-[#f4f4f5] sticky top-0 z-50 shadow-xs transition-colors duration-200">
-      {/* Brand Logo & Name */}
-      <div className="flex items-center gap-2.5">
-        <a href="/" className="flex items-center gap-2">
-          <div className="relative h-8 w-8 shrink-0">
-            <Image
-              src="/images/logo.png"
-              alt="Freemann Firms"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <span className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-[#a500a3] dark:text-[#d600b1]">
-            Freemann Firms
-          </span>
-        </a>
-      </div>
+    <header className="min-h-16 w-full border-b border-[#e4e4e7] dark:border-[#27272a] bg-white/95 dark:bg-[#09090b]/95 backdrop-blur-md px-4 sm:px-6 md:px-10 lg:px-12 text-[#18181b] dark:text-[#f4f4f5] sticky top-0 z-50 shadow-xs transition-colors duration-200 flex items-center">
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
+        {/* Brand Logo & Name */}
+        <div className="flex items-center gap-2.5">
+          <a href="/" className="flex items-center gap-2">
+            <div className="relative h-8 w-8 shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt="Freemann Firms"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-[#a500a3] dark:text-[#d600b1]">
+              Freemann Firms
+            </span>
+          </a>
+        </div>
 
-      {/* Desktop Nav Links in MadeInBlacc Style */}
-      <nav className="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
-        <a href="#" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Home
-        </a>
-        <a href="#mission" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Our Mission
-        </a>
-        <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Our Products
-        </a>
-        <a href="#architecture" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Why Freemann
-        </a>
-        <a href="#contact" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Stay Connected
-        </a>
-      </nav>
+        {/* Desktop Nav Links in MadeInBlacc Style */}
+        <nav className="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
+          <a href="#" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+            Home
+          </a>
+          <a href="#mission" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+            Our Mission
+          </a>
+          <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+            Our Products
+          </a>
+          <a href="#architecture" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+            Why Freemann
+          </a>
+          <a href="#contact" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+            Stay Connected
+          </a>
+        </nav>
 
-      {/* Actions */}
-      <div className="flex items-center gap-2.5 sm:gap-3">
-        {/* Light / Dark Mode Toggle Button */}
-        <button
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-          className="p-2 rounded-full border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95"
-        >
-          {theme === "dark" ? (
-            <Sun className="w-4 h-4 text-amber-400 animate-in spin-in-180 duration-300" />
-          ) : (
-            <Moon className="w-4 h-4 text-[#a500a3] animate-in spin-in-180 duration-300" />
-          )}
-        </button>
+        {/* Actions */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          {/* Light / Dark Mode Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-full border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4 text-amber-400 animate-in spin-in-180 duration-300" />
+            ) : (
+              <Moon className="w-4 h-4 text-[#a500a3] animate-in spin-in-180 duration-300" />
+            )}
+          </button>
 
-        <a
-          href="https://www.freemannfirms.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#a500a3] hover:bg-[#850083] text-white h-10 px-6 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all active:scale-95"
-        >
-          <span>Launch App</span>
-          <ArrowUpRight className="w-4 h-4" />
-        </a>
+          <a
+            href="https://www.freemannfirms.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#a500a3] hover:bg-[#850083] text-white h-10 px-6 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all active:scale-95"
+          >
+            <span>Launch App</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 rounded-lg text-[#52525b] dark:text-[#a1a1aa] hover:text-[#18181b] dark:hover:text-white hover:bg-[#f4f4f5] dark:hover:bg-[#27272a] transition-colors"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 rounded-lg text-[#52525b] dark:text-[#a1a1aa] hover:text-[#18181b] dark:hover:text-white hover:bg-[#f4f4f5] dark:hover:bg-[#27272a] transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Overlay in Exact Order */}

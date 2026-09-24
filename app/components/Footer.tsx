@@ -6,7 +6,7 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer id="contact" className="w-full bg-[#120017] dark:bg-[#060008] text-white border-t border-[#a500a3]/30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 pt-14 pb-8">
         {/* Top Logo & Branding */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-10 border-b border-white/10">
           <a aria-label="Freemann Firms home" href="/" className="flex items-center gap-3">

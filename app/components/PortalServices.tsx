@@ -136,8 +136,8 @@ export function PortalServices() {
   ];
 
   return (
-    <section id="services" className="w-full bg-[#f8fafc] dark:bg-[#09090b] py-12 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#e4e4e7] dark:border-[#27272a] transition-colors duration-200">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="w-full bg-[#f8fafc] dark:bg-[#09090b] py-14 sm:py-20 md:py-28 px-4 sm:px-6 md:px-10 lg:px-12 border-b border-[#e4e4e7] dark:border-[#27272a] transition-colors duration-200">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header in MadeInBlacc Style */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <p className="text-[#a500a3] dark:text-[#d600b1] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
@@ -151,12 +151,12 @@ export function PortalServices() {
           </p>
         </div>
 
-        {/* 4 Products List in Exact Order */}
-        <div className="space-y-6 sm:space-y-8">
+        {/* 4 Products in 2x2 Grid (MadeInBlacc style) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {products.map((p) => (
             <div
               key={p.id}
-              className="bg-white dark:bg-[#121215] border-2 border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3]/70 dark:hover:border-[#a500a3] rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
+              className="bg-white dark:bg-[#121215] border-2 border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3]/70 dark:hover:border-[#a500a3] rounded-3xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
             >
               {/* Refined Top Gradient Line with Subtle Golden Shimmer */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-amber-300/80 to-[#680097]" />
@@ -164,136 +164,21 @@ export function PortalServices() {
               {/* Ambient Soft Glow Effect */}
               <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-[#a500a3]/5 dark:bg-[#a500a3]/10 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
-                {/* Left Column: Product Details */}
-                <div className="flex-1 w-full">
-                  {/* Top Status Badges - Purple with Gold Accent */}
-                  <div className="flex items-center gap-2.5 mb-3.5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#a500a3]/10 dark:bg-[#a500a3]/20 text-xs font-mono font-extrabold text-[#a500a3] dark:text-[#d600b1] border border-amber-400/50 dark:border-amber-400/40 shadow-xs">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-                      <span>SERVICE {p.number}</span>
-                    </span>
-                    <span
-                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full border shadow-xs ${p.badgeColor}`}
-                    >
-                      <span className={`w-2 h-2 rounded-full ${p.dotColor} ${p.isLive ? "animate-pulse" : ""}`} />
-                      {p.badge}
-                    </span>
-                  </div>
+              <div className="flex flex-col flex-1 relative z-10">
+                {/* 1. Top Centered Standalone Illustration with Ambient Glow Halo */}
+                <div className="w-full flex items-center justify-center mb-5 pt-1">
+                  <div className="relative w-full max-w-[200px] sm:max-w-[240px] md:max-w-[260px] aspect-square rounded-2xl overflow-hidden group/img">
+                    {/* Glowing Halo Ring */}
+                    <div className="absolute inset-2 bg-gradient-to-tr from-[#a500a3]/15 via-[#680097]/15 to-amber-400/10 dark:from-[#a500a3]/30 dark:via-[#680097]/20 dark:to-transparent rounded-full blur-2xl -z-10 group-hover/img:scale-115 transition-transform duration-500 pointer-events-none" />
 
-                  {/* Title & Tagline */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#18181b] dark:text-white group-hover:text-[#a500a3] dark:group-hover:text-[#d600b1] transition-colors mb-2">
-                    {p.title}
-                  </h3>
-                  <p className="text-sm sm:text-base font-semibold text-[#a500a3] dark:text-[#d600b1] mb-3 sm:mb-4 leading-snug">
-                    {p.tagline}
-                  </p>
-
-                  <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-4 sm:mb-6">
-                    {p.desc}
-                  </p>
-
-                  {/* Metric Ribbon - Clean & Sleek in Dark & Light */}
-                  <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] dark:divide-[#27272a] p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] dark:from-[#18181b] dark:via-[#1e1e24] dark:to-[#18181b] border border-[#e4e4e7] dark:border-[#27272a] shadow-xs mb-5 sm:mb-6">
-                    {p.metrics.map((m, mIdx) => (
-                      <div key={mIdx} className="px-2 sm:px-3 text-center sm:text-left first:pl-0 last:pr-0">
-                        <span className="text-[10px] sm:text-xs uppercase font-semibold text-[#71717a] dark:text-[#a1a1aa] block truncate">
-                          {m.label}
-                        </span>
-                        <span className="text-xs sm:text-sm md:text-base font-bold text-[#18181b] dark:text-white truncate block mt-0.5">
-                          {m.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Features Bullet Points */}
-                  <ul className="space-y-2.5 mb-6 sm:mb-8">
-                    {p.features.map((feat, fIdx) => (
-                      <li
-                        key={fIdx}
-                        className="flex items-start gap-2.5 text-sm sm:text-base text-[#3f3f46] dark:text-[#d4d4d8]"
-                      >
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#a500a3] dark:text-[#d600b1] shrink-0 mt-0.5" />
-                        <span className="leading-snug">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Action Buttons - MadeInBlacc Pill Style */}
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
-                    {p.actionType === "link" && (
-                      <a
-                        href={p.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all w-full sm:w-auto active:scale-95"
-                      >
-                        <span>{p.actionText}</span>
-                        <ArrowUpRight className="w-4 h-4" />
-                      </a>
-                    )}
-
-                    {p.actionType === "p2p_whatsapp_only" && (
-                      <a
-                        href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20P2P%2C%20I%20would%20like%20to%20trade%20Crypto%20%2F%20Giftcards."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-95"
-                      >
-                        <MessageCircle className="w-4 h-4" />
-                        <span>CONTACT MERCHANT on WhatsApp</span>
-                      </a>
-                    )}
-
-                    {p.actionType === "academy_contact" && (
-                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-                        <a
-                          href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Academy."
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-95"
-                        >
-                          <MessageCircle className="w-4 h-4" />
-                          <span>CONTACT VIA WHATSAPP</span>
-                        </a>
-
-                        <a
-                          href="mailto:support@freemannfirom.com?subject=Academy%20Enrollment%20Inquiry"
-                          className="bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full text-sm sm:text-base font-semibold shadow-xs transition-all w-full sm:w-auto active:scale-95"
-                        >
-                          <Mail className="w-4 h-4 text-[#a500a3] dark:text-[#d600b1]" />
-                          <span>REACH OUT VIA MAIL</span>
-                        </a>
-                      </div>
-                    )}
-
-                    {p.actionType === "waitlist" && (
-                      <button
-                        onClick={() => setWaitlistModalOpen(true)}
-                        className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 w-full sm:w-auto cursor-pointer active:scale-95"
-                      >
-                        <Clock className="w-4 h-4" />
-                        <span>{p.actionText}</span>
-                      </button>
-                    )}
-                  </div>
-                </div>
-
-                {/* Right Column: 2D Standalone Illustration with Light & Dark Variants */}
-                <div className="w-full lg:w-[360px] xl:w-[400px] flex items-center justify-center shrink-0 mb-4 lg:mb-0">
-                  <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] aspect-square rounded-2xl overflow-hidden group">
-                    {/* Ambient Glow */}
-                    <div className="absolute inset-2 bg-gradient-to-tr from-[#a500a3]/10 via-[#680097]/10 to-transparent dark:from-[#a500a3]/25 dark:via-[#680097]/15 dark:to-transparent rounded-full blur-2xl -z-10 group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
-
-                    {/* Light Mode Illustration */}
+                    {/* Light Mode Illustration with seamless blend */}
                     <div className="relative w-full h-full block dark:hidden">
                       <Image
                         src={p.illustration}
                         alt={p.title}
                         fill
-                        sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
-                        className="object-contain rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 200px, 260px"
+                        className="object-contain mix-blend-multiply group-hover/img:scale-105 transition-transform duration-500"
                       />
                     </div>
 
@@ -303,12 +188,124 @@ export function PortalServices() {
                         src={p.illustrationDark}
                         alt={p.title}
                         fill
-                        sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 380px"
-                        className="object-contain rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 200px, 260px"
+                        className="object-contain rounded-2xl group-hover/img:scale-105 transition-transform duration-500"
                       />
                     </div>
                   </div>
                 </div>
+
+                {/* 2. Status Badges */}
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-[#a500a3]/10 dark:bg-[#a500a3]/20 text-[10px] sm:text-[11px] font-mono font-extrabold text-[#a500a3] dark:text-[#d600b1] border border-amber-400/40">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                    <span>SERVICE {p.number}</span>
+                  </span>
+                  <span
+                    className={`inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full border shadow-xs ${p.badgeColor}`}
+                  >
+                    <span className={`w-1.5 h-1.5 rounded-full ${p.dotColor} ${p.isLive ? "animate-pulse" : ""}`} />
+                    {p.badge}
+                  </span>
+                </div>
+
+                {/* 3. Title & Tagline */}
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#18181b] dark:text-white group-hover:text-[#a500a3] dark:group-hover:text-[#d600b1] transition-colors mb-1.5 leading-snug">
+                  {p.title}
+                </h3>
+                <p className="text-xs sm:text-sm font-semibold text-[#a500a3] dark:text-[#d600b1] mb-2.5 sm:mb-3 leading-snug">
+                  {p.tagline}
+                </p>
+
+                <p className="text-xs sm:text-sm text-[#52525b] dark:text-[#a1a1aa] leading-relaxed mb-4">
+                  {p.desc}
+                </p>
+
+                {/* 4. Metric Ribbon */}
+                <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] dark:divide-[#27272a] p-2.5 sm:p-3 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] dark:from-[#18181b] dark:via-[#1e1e24] dark:to-[#18181b] border border-[#e4e4e7] dark:border-[#27272a] shadow-xs mb-4">
+                  {p.metrics.map((m, mIdx) => (
+                    <div key={mIdx} className="px-1.5 sm:px-2 text-center first:pl-0 last:pr-0">
+                      <span className="text-[9px] sm:text-[10px] uppercase font-semibold text-[#71717a] dark:text-[#a1a1aa] block truncate">
+                        {m.label}
+                      </span>
+                      <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[#18181b] dark:text-white truncate block mt-0.5">
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* 5. Features Bullet List */}
+                <ul className="space-y-2 mb-6 flex-1">
+                  {p.features.map((feat, fIdx) => (
+                    <li
+                      key={fIdx}
+                      className="flex items-start gap-2 text-xs sm:text-sm text-[#3f3f46] dark:text-[#d4d4d8]"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-[#a500a3] dark:text-[#d600b1] shrink-0 mt-0.5" />
+                      <span className="leading-snug">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 6. Action Buttons - Bottom Pill Style */}
+              <div className="pt-2 border-t border-[#e4e4e7] dark:border-[#27272a] relative z-10 w-full">
+                {p.actionType === "link" && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all w-full active:scale-95"
+                  >
+                    <span>{p.actionText}</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                )}
+
+                {p.actionType === "p2p_whatsapp_only" && (
+                  <a
+                    href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20P2P%2C%20I%20would%20like%20to%20trade%20Crypto%20%2F%20Giftcards."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs sm:text-sm font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full active:scale-95"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>CONTACT MERCHANT on WhatsApp</span>
+                  </a>
+                )}
+
+                {p.actionType === "academy_contact" && (
+                  <div className="flex flex-row items-center gap-2.5 w-full">
+                    <a
+                      href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Academy."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-1.5 h-11 px-3 sm:px-4 rounded-full text-xs font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all flex-1 active:scale-95"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      <span>WhatsApp</span>
+                    </a>
+
+                    <a
+                      href="mailto:support@freemannfirom.com?subject=Academy%20Enrollment%20Inquiry"
+                      className="bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] inline-flex items-center justify-center gap-1.5 h-11 px-3 sm:px-4 rounded-full text-xs font-semibold shadow-xs transition-all flex-1 active:scale-95"
+                    >
+                      <Mail className="w-3.5 h-3.5 text-[#a500a3] dark:text-[#d600b1]" />
+                      <span>Mail</span>
+                    </a>
+                  </div>
+                )}
+
+                {p.actionType === "waitlist" && (
+                  <button
+                    onClick={() => setWaitlistModalOpen(true)}
+                    className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs sm:text-sm font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 w-full cursor-pointer active:scale-95"
+                  >
+                    <Clock className="w-4 h-4" />
+                    <span>{p.actionText}</span>
+                  </button>
+                )}
               </div>
             </div>
           ))}

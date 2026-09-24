@@ -24,8 +24,8 @@ export function PortalArchitecture() {
   ];
 
   return (
-    <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-12 sm:py-16 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto">
+    <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-16 sm:py-24 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 md:px-10 lg:px-12 transition-colors duration-200">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <p className="text-[#a500a3] dark:text-[#d600b1] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
             Why Choose Us
