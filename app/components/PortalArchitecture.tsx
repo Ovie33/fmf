@@ -27,8 +27,11 @@ export function PortalArchitecture() {
     <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-12 sm:py-16 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#18181b] dark:text-white mb-3">
-            Why the <span className="text-[#a500a3] dark:text-[#d600b1]">Freemann Firms Ecosystem</span>?
+          <p className="text-[#a500a3] dark:text-[#d600b1] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
+            Why Choose Us
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight mb-3">
+            Why the Freemann Firms Ecosystem?
           </h2>
           <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
             Engineered from the ground up to give investors total control, transparent returns, and uncompromising asset security across all digital financial services.

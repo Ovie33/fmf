@@ -138,17 +138,16 @@ export function PortalServices() {
   return (
     <section id="services" className="w-full bg-[#f8fafc] dark:bg-[#09090b] py-12 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#e4e4e7] dark:border-[#27272a] transition-colors duration-200">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
+        {/* Section Header in MadeInBlacc Style */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-[#a500a3] dark:text-[#d600b1] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
-            <Sparkles className="w-4 h-4" />
-            <span>ECOSYSTEM PILLARS</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#18181b] dark:text-white tracking-tight mb-3 sm:mb-4">
-            The Freemann Firms <span className="text-[#a500a3] dark:text-[#d600b1]">Products</span>
+          <p className="text-[#a500a3] dark:text-[#d600b1] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
+            What We Build
+          </p>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight mb-4">
+            Product & Platform Suites
           </h2>
-          <p className="text-sm sm:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
-            A unified suite of financial technology solutions built for investors, traders, businesses, and learners.
+          <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
+            An interconnected ecosystem of decentralized fund management, direct peer-to-peer liquidity, professional trading mentorship, and universal online commerce.
           </p>
         </div>
 
@@ -221,14 +220,14 @@ export function PortalServices() {
                     ))}
                   </ul>
 
-                  {/* Action Buttons - Mobile Full Width */}
+                  {/* Action Buttons - MadeInBlacc Pill Style */}
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
                     {p.actionType === "link" && (
                       <a
                         href={p.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 hover:shadow-lg hover:shadow-[#a500a3]/30 w-full sm:w-auto active:scale-98"
+                        className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all w-full sm:w-auto active:scale-95"
                       >
                         <span>{p.actionText}</span>
                         <ArrowUpRight className="w-4 h-4" />
@@ -240,7 +239,7 @@ export function PortalServices() {
                         href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20P2P%2C%20I%20would%20like%20to%20trade%20Crypto%20%2F%20Giftcards."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-98"
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-95"
                       >
                         <MessageCircle className="w-4 h-4" />
                         <span>CONTACT MERCHANT on WhatsApp</span>
@@ -253,7 +252,7 @@ export function PortalServices() {
                           href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Academy."
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-98"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-95"
                         >
                           <MessageCircle className="w-4 h-4" />
                           <span>CONTACT VIA WHATSAPP</span>
@@ -261,7 +260,7 @@ export function PortalServices() {
 
                         <a
                           href="mailto:support@freemannfirom.com?subject=Academy%20Enrollment%20Inquiry"
-                          className="bg-white dark:bg-[#18181b] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-xs transition-all w-full sm:w-auto active:scale-98"
+                          className="bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full text-sm sm:text-base font-semibold shadow-xs transition-all w-full sm:w-auto active:scale-95"
                         >
                           <Mail className="w-4 h-4 text-[#a500a3] dark:text-[#d600b1]" />
                           <span>REACH OUT VIA MAIL</span>
@@ -272,7 +271,7 @@ export function PortalServices() {
                     {p.actionType === "waitlist" && (
                       <button
                         onClick={() => setWaitlistModalOpen(true)}
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 hover:shadow-lg hover:shadow-[#a500a3]/30 w-full sm:w-auto cursor-pointer active:scale-98"
+                        className="bg-[#a500a3] hover:bg-[#850083] text-white inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 w-full sm:w-auto cursor-pointer active:scale-95"
                       >
                         <Clock className="w-4 h-4" />
                         <span>{p.actionText}</span>

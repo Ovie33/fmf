@@ -29,29 +29,32 @@ export function Navbar() {
         </a>
       </div>
 
-      {/* Desktop Nav Links in Exact Order */}
-      <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
-        <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Investments
+      {/* Desktop Nav Links in MadeInBlacc Style */}
+      <nav className="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
+        <a href="#" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+          Home
+        </a>
+        <a href="#mission" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+          Our Mission
         </a>
         <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Academy
+          Our Products
         </a>
-        <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          P2P
+        <a href="#architecture" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+          Why Freemann
         </a>
-        <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-          Online Market
+        <a href="#contact" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
+          Stay Connected
         </a>
       </nav>
 
       {/* Actions */}
-      <div className="flex items-center gap-2 sm:gap-3">
+      <div className="flex items-center gap-2.5 sm:gap-3">
         {/* Light / Dark Mode Toggle Button */}
         <button
           onClick={toggleTheme}
           aria-label="Toggle theme"
-          className="p-2 rounded-xl border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95"
+          className="p-2 rounded-full border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95"
         >
           {theme === "dark" ? (
             <Sun className="w-4 h-4 text-amber-400 animate-in spin-in-180 duration-300" />
@@ -64,7 +67,7 @@ export function Navbar() {
           href="https://www.freemannfirms.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary h-10 px-4 rounded-[9px] text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/20 active:scale-95"
+          className="bg-[#a500a3] hover:bg-[#850083] text-white h-10 px-6 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all active:scale-95"
         >
           <span>Launch App</span>
           <ArrowUpRight className="w-4 h-4" />

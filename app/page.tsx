@@ -3,8 +3,10 @@
 import React from "react";
 import { Navbar } from "./components/Navbar";
 import { PortalHero } from "./components/PortalHero";
+import { PortalMission } from "./components/PortalMission";
 import { PortalServices } from "./components/PortalServices";
 import { PortalArchitecture } from "./components/PortalArchitecture";
+import { PortalCallout } from "./components/PortalCallout";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
@@ -16,13 +18,19 @@ export default function Home() {
       {/* 2. Unified Ecosystem Portal Hero */}
       <PortalHero />
 
-      {/* 3. Core Ecosystem Services Directory & Launchpads */}
+      {/* 3. Ecosystem Mission & Story (MadeInBlacc style) */}
+      <PortalMission />
+
+      {/* 4. Core Product & Platform Suites */}
       <PortalServices />
 
-      {/* 4. Ecosystem Value Pillars & Architecture */}
+      {/* 5. Ecosystem Value Pillars & Architecture */}
       <PortalArchitecture />
 
-      {/* 5. Official Regulatory & Legal Policy Footer */}
+      {/* 6. Connect & Partner Callout Banner */}
+      <PortalCallout />
+
+      {/* 7. Multi-Column Ecosystem Footer */}
       <Footer />
     </main>
   );
