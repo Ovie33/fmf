@@ -34,21 +34,24 @@ export function PortalArchitecture() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {pillars.map((p, idx) => (
             <div
               key={idx}
-              className="bg-[#fafafa] border border-[#e4e4e7] hover:border-[#a500a3]/50 rounded-2xl p-6 flex flex-col items-center text-center transition-all hover:shadow-md group"
+              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/60 rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-300 shadow-[0_8px_25px_rgb(0,0,0,0.05)] hover:shadow-[0_16px_35px_-8px_rgba(165,0,163,0.15)] group relative overflow-hidden"
             >
-              <div className="relative h-14 w-14 mb-4 group-hover:scale-110 transition-transform">
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-[#680097] to-[#d600b1]" />
+
+              <div className="relative h-16 w-16 mb-4 rounded-2xl bg-[#faf5ff] border border-[#e9d5ff]/60 p-3 shadow-xs flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Image
                   src={p.img}
                   alt={p.title}
                   fill
-                  className="object-contain"
+                  className="object-contain p-2"
                 />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#18181b] mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-[#18181b] mb-2 group-hover:text-[#a500a3] transition-colors">
                 {p.title}
               </h3>
               <p className="text-sm text-[#52525b] leading-relaxed">

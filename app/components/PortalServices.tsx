@@ -153,18 +153,24 @@ export function PortalServices() {
           {products.map((p) => (
             <div
               key={p.id}
-              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/60 rounded-3xl p-5 sm:p-8 transition-all hover:shadow-xl group relative overflow-hidden"
+              className="bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3]/60 rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(165,0,163,0.18)] group relative overflow-hidden"
             >
-              <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8">
+              {/* Premium Top Gradient Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#a500a3] via-[#680097] to-[#d600b1]" />
+
+              {/* Ambient Soft Glow Effect */}
+              <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-[#a500a3]/5 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
                 {/* Left Column: Product Details */}
                 <div className="flex-1 w-full">
                   {/* Top Status Badges */}
-                  <div className="flex items-center gap-2.5 mb-3">
-                    <span className="text-xs sm:text-sm font-mono font-bold text-[#71717a]">
+                  <div className="flex items-center gap-2.5 mb-3.5">
+                    <span className="px-2.5 py-1 rounded-md bg-[#f4f4f5] text-xs font-mono font-bold text-[#71717a] border border-[#e4e4e7]">
                       SERVICE {p.number}
                     </span>
                     <span
-                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full border ${p.badgeColor}`}
+                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full border shadow-xs ${p.badgeColor}`}
                     >
                       <span className={`w-2 h-2 rounded-full ${p.dotColor} ${p.isLive ? "animate-pulse" : ""}`} />
                       {p.badge}
@@ -183,10 +189,10 @@ export function PortalServices() {
                     {p.desc}
                   </p>
 
-                  {/* Metric Ribbon - Mobile Enhanced */}
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-[#fafafa] border border-[#e4e4e7] mb-5 sm:mb-6">
+                  {/* Metric Ribbon - Juiced Up Mobile & Desktop */}
+                  <div className="grid grid-cols-3 divide-x divide-[#e4e4e7] p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fafafa] via-white to-[#fafafa] border border-[#e4e4e7] shadow-xs mb-5 sm:mb-6">
                     {p.metrics.map((m, mIdx) => (
-                      <div key={mIdx} className="text-center sm:text-left">
+                      <div key={mIdx} className="px-2 sm:px-3 text-center sm:text-left first:pl-0 last:pr-0">
                         <span className="text-[10px] sm:text-xs uppercase font-semibold text-[#71717a] block truncate">
                           {m.label}
                         </span>
@@ -217,7 +223,7 @@ export function PortalServices() {
                         href={p.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto active:scale-98"
+                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 hover:shadow-lg hover:shadow-[#a500a3]/30 w-full sm:w-auto active:scale-98"
                       >
                         <span>{p.actionText}</span>
                         <ArrowUpRight className="w-4 h-4" />
@@ -229,7 +235,7 @@ export function PortalServices() {
                         href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20P2P%2C%20I%20would%20like%20to%20trade%20Crypto%20%2F%20Giftcards."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 transition-all w-full sm:w-auto active:scale-98"
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-98"
                       >
                         <MessageCircle className="w-4 h-4" />
                         <span>CONTACT MERCHANT on WhatsApp</span>
@@ -242,7 +248,7 @@ export function PortalServices() {
                           href="https://wa.me/2348105347598?text=Hello%20Freemann%20Firms%20Academy%2C%20I%20would%20like%20to%20enroll%20in%20the%20Academy."
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 transition-all w-full sm:w-auto active:scale-98"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white inline-flex items-center justify-center gap-2 h-12 px-5 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg hover:shadow-emerald-600/30 transition-all w-full sm:w-auto active:scale-98"
                         >
                           <MessageCircle className="w-4 h-4" />
                           <span>CONTACT VIA WHATSAPP</span>
@@ -261,7 +267,7 @@ export function PortalServices() {
                     {p.actionType === "waitlist" && (
                       <button
                         onClick={() => setWaitlistModalOpen(true)}
-                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 w-full sm:w-auto cursor-pointer active:scale-98"
+                        className="btn-primary inline-flex items-center justify-center gap-2 h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold shadow-md shadow-[#a500a3]/20 hover:shadow-lg hover:shadow-[#a500a3]/30 w-full sm:w-auto cursor-pointer active:scale-98"
                       >
                         <Clock className="w-4 h-4" />
                         <span>{p.actionText}</span>
@@ -270,9 +276,9 @@ export function PortalServices() {
                   </div>
                 </div>
 
-                {/* Right Column: 2D Storyset Illustration */}
+                {/* Right Column: 2D Storyset Illustration Box */}
                 <div className="w-full lg:w-80 flex items-center justify-center shrink-0">
-                  <div className="relative h-48 w-full max-w-[240px] sm:h-64 sm:max-w-[280px] lg:h-72 lg:max-w-[320px] bg-[#fafafa] rounded-2xl p-3 sm:p-4 border border-[#f4f4f5]">
+                  <div className="relative h-52 w-full max-w-[260px] sm:h-64 sm:max-w-[280px] lg:h-72 lg:max-w-[320px] bg-gradient-to-b from-[#faf5ff]/60 to-[#f4f4f5] rounded-3xl p-3 sm:p-4 border border-[#e9d5ff]/50 shadow-xs">
                     <Image
                       src={p.illustration}
                       alt={p.title}

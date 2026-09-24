@@ -49,7 +49,7 @@ export function PortalHero() {
                 <a
                   key={idx}
                   href={item.href}
-                  className="px-3.5 py-2.5 rounded-xl bg-white border border-[#e4e4e7] hover:border-[#a500a3] text-xs sm:text-sm font-semibold text-[#18181b] flex items-center justify-center sm:justify-start gap-2 transition-all hover:bg-[#f4f4f5] shadow-xs active:scale-95"
+                  className="px-3.5 py-2.5 rounded-xl bg-white border-2 border-[#e4e4e7] hover:border-[#a500a3] text-xs sm:text-sm font-semibold text-[#18181b] flex items-center justify-center sm:justify-start gap-2 transition-all hover:bg-[#fafafa] shadow-xs hover:shadow-sm active:scale-95"
                 >
                   <Icon className="w-4 h-4 text-[#a500a3] shrink-0" />
                   <span className="truncate">{item.label}</span>
@@ -62,7 +62,7 @@ export function PortalHero() {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 w-full">
             <a
               href="#services"
-              className="btn-primary h-12 sm:h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#a500a3]/20 w-full sm:w-auto active:scale-98"
+              className="btn-primary h-12 sm:h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#a500a3]/20 hover:shadow-xl hover:shadow-[#a500a3]/30 w-full sm:w-auto active:scale-98"
             >
               <span>Explore All Products</span>
               <ArrowDown className="w-4 h-4" />
@@ -71,7 +71,7 @@ export function PortalHero() {
               href="https://freeman-firms.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 sm:h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold text-[#18181b] border border-[#e4e4e7] bg-white hover:bg-[#f4f4f5] transition-colors flex items-center justify-center gap-1.5 shadow-xs w-full sm:w-auto active:scale-98"
+              className="h-12 sm:h-12 px-6 rounded-[9px] text-sm sm:text-base font-semibold text-[#18181b] border-2 border-[#e4e4e7] hover:border-[#a500a3] bg-white hover:bg-[#f4f4f5] transition-all flex items-center justify-center gap-1.5 shadow-xs w-full sm:w-auto active:scale-98"
             >
               <span>Launch Investment App</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -81,7 +81,7 @@ export function PortalHero() {
 
         {/* Right Column: Freemann Firms Solar Ecosystem 2D Illustration */}
         <div className="w-full lg:w-[480px] flex items-center justify-center shrink-0">
-          <div className="relative w-full max-w-[300px] sm:max-w-[380px] lg:max-w-[440px] aspect-square rounded-3xl bg-white p-4 border border-[#e4e4e7] shadow-xl hover:shadow-2xl transition-all group">
+          <div className="relative w-full max-w-[300px] sm:max-w-[380px] lg:max-w-[440px] aspect-square rounded-3xl bg-white p-4 border-2 border-[#e4e4e7] shadow-[0_12px_35px_rgb(0,0,0,0.08)] hover:shadow-2xl transition-all group">
             <Image
               src="/images/solar-ecosystem.png"
               alt="Freemann Firms Solar System Ecosystem Architecture"
