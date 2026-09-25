@@ -16,7 +16,7 @@ export function PortalCallout() {
             Connect & Grow With Freemann Firms
           </span>
 
-          <h2 className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold max-w-5xl leading-[1.15] tracking-tight">
+          <h2 className="relative z-10 text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold max-w-5xl leading-tight tracking-tight">
             Whether you&apos;re an investor, trader, merchant, or student there is a place for you inside our ecosystem.
           </h2>
 

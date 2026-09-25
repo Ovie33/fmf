@@ -32,7 +32,7 @@ export function PortalArchitecture() {
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>Why Choose Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight leading-tight mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight leading-tight mb-3 sm:mb-4">
             Why the Freemann Firms Ecosystem?
           </h2>
           <p className="text-sm sm:text-base md:text-base lg:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">

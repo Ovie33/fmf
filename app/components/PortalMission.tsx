@@ -22,7 +22,7 @@ export function PortalMission() {
             <span>About Freemann Firms</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 mb-3 sm:mb-5">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 mb-3 sm:mb-4">
             Our Mission & Philosophy
           </h2>
 
