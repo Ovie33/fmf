@@ -87,10 +87,7 @@ export function Navbar() {
       {/* Mobile Drawer Overlay in Exact Order */}
       {mobileOpen && (
         <div className="absolute top-16 left-0 w-full bg-white dark:bg-[#09090b] border-b border-[#e4e4e7] dark:border-[#27272a] p-5 flex flex-col gap-3 xl:hidden shadow-xl animate-in slide-in-from-top-2">
-          <div className="flex items-center justify-between px-1 mb-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#71717a] dark:text-[#a1a1aa]">
-              Links
-            </span>
+          <div className="flex items-center justify-end px-1 mb-1">
             <button
               onClick={toggleTheme}
               className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-lg border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b]"

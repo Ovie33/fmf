@@ -163,8 +163,8 @@ export function Footer() {
               </p>
               <p>
                 <strong className="text-white">Email:</strong><br />
-                <a href="mailto:support@freemannfirom.com" className="hover:text-amber-300">
-                  support@freemannfirom.com
+                <a href="support@freemanfirms.com" className="hover:text-amber-300">
+                  support@freemanfirms.com
                 </a>
               </p>
               <p className="text-xs text-zinc-400 pt-1">
