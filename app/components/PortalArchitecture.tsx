@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { Sparkles } from "lucide-react";
 
 export function PortalArchitecture() {
   const pillars = [
@@ -24,16 +25,17 @@ export function PortalArchitecture() {
   ];
 
   return (
-    <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-16 sm:py-24 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 md:px-10 lg:px-12 transition-colors duration-200">
+    <section id="architecture" className="w-full bg-white dark:bg-[#0c0c0e] py-12 sm:py-18 md:py-24 border-t border-b border-[#e4e4e7] dark:border-[#27272a] px-4 sm:px-6 md:px-10 lg:px-12 transition-colors duration-200">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <p className="text-[#a500a3] dark:text-[#d600b1] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
-            Why Choose Us
-          </p>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 flex flex-col items-center">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#a500a3] dark:text-[#d600b1] mb-2 sm:mb-3">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Why Choose Us</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 tracking-tight leading-tight mb-3 sm:mb-4">
             Why the Freemann Firms Ecosystem?
           </h2>
-          <p className="text-sm sm:text-base text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-base lg:text-lg text-[#52525b] dark:text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
             Engineered from the ground up to give investors total control, transparent returns, and uncompromising asset security across all digital financial services.
           </p>
         </div>

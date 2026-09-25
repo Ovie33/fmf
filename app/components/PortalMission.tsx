@@ -19,13 +19,13 @@ export function PortalMission() {
           <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span>About Freemann Firms</span>
         </div>
-        
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 mb-3 sm:mb-5">
+
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 mb-3 sm:mb-5">
           Our Mission & Philosophy
         </h2>
 
         {/* Narrative Paragraphs */}
-        <div className="flex flex-col gap-3 sm:gap-4 text-base sm:text-lg md:text-xl text-[#3f3f46] dark:text-[#d4d4d8] leading-relaxed mb-6 sm:mb-8">
+        <div className="flex flex-col gap-3 sm:gap-4 text-sm sm:text-base md:text-base lg:text-lg text-[#3f3f46] dark:text-[#d4d4d8] leading-relaxed mb-6 sm:mb-8">
           <p>
             Freemann Firms is an integrated financial technology ecosystem focused on building decentralized wealth management, peer-to-peer trading infrastructure, expert mentorship, and universal commerce.
           </p>
@@ -37,7 +37,7 @@ export function PortalMission() {
         {/* Core Beliefs Checklist */}
         <div className="w-full flex flex-col items-center gap-3 pt-2">
           <p className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#18181b] dark:text-white">
-            We believe in:
+            What We Belive in:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full text-left">
             {beliefs.map((item, idx) => (

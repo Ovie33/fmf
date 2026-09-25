@@ -24,38 +24,38 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-[#a500a3] dark:text-[#d600b1]">
+            <span className="hidden sm:inline text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-[#a500a3] dark:text-[#d600b1]">
               Freemann Firms
             </span>
           </a>
         </div>
 
         {/* Desktop Nav Links in MadeInBlacc Style */}
-        <nav className="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
+        <nav className="hidden xl:flex items-center space-x-6 2xl:space-x-8 text-sm font-medium text-[#52525b] dark:text-[#a1a1aa]">
           <a href="#" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
             Home
           </a>
           <a href="#mission" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-            Our Mission
+            Mission
           </a>
           <a href="#services" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-            Our Products
+            Products
           </a>
           <a href="#architecture" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-            Why Freemann
+            About Us
           </a>
           <a href="#contact" className="hover:text-[#a500a3] dark:hover:text-[#d600b1] transition-colors">
-            Stay Connected
+            Connect
           </a>
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Light / Dark Mode Toggle Button */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="p-2 rounded-full border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95"
+            className="p-2 rounded-full border border-[#e4e4e7] dark:border-[#27272a] bg-[#fafafa] dark:bg-[#18181b] text-[#52525b] dark:text-[#f4f4f5] hover:border-[#a500a3] dark:hover:border-[#a500a3] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
           >
             {theme === "dark" ? (
               <Sun className="w-4 h-4 text-amber-400 animate-in spin-in-180 duration-300" />
@@ -68,16 +68,15 @@ export function Navbar() {
             href="https://www.freemannfirms.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#a500a3] hover:bg-[#850083] text-white h-10 px-6 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all active:scale-95"
+            className="bg-[#a500a3] hover:bg-[#850083] text-white h-10 px-4 sm:px-6 rounded-full text-xs sm:text-sm font-semibold flex items-center justify-center shadow-md shadow-[#a500a3]/25 hover:shadow-lg hover:shadow-[#a500a3]/35 transition-all active:scale-95 whitespace-nowrap shrink-0"
           >
-            <span>Launch App</span>
-            <ArrowUpRight className="w-4 h-4" />
+            Launch App
           </a>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-lg text-[#52525b] dark:text-[#a1a1aa] hover:text-[#18181b] dark:hover:text-white hover:bg-[#f4f4f5] dark:hover:bg-[#27272a] transition-colors"
+            className="xl:hidden p-2 rounded-lg text-[#52525b] dark:text-[#a1a1aa] hover:text-[#18181b] dark:hover:text-white hover:bg-[#f4f4f5] dark:hover:bg-[#27272a] transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -87,7 +86,7 @@ export function Navbar() {
 
       {/* Mobile Drawer Overlay in Exact Order */}
       {mobileOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white dark:bg-[#09090b] border-b border-[#e4e4e7] dark:border-[#27272a] p-5 flex flex-col gap-3 lg:hidden shadow-xl animate-in slide-in-from-top-2">
+        <div className="absolute top-16 left-0 w-full bg-white dark:bg-[#09090b] border-b border-[#e4e4e7] dark:border-[#27272a] p-5 flex flex-col gap-3 xl:hidden shadow-xl animate-in slide-in-from-top-2">
           <div className="flex items-center justify-between px-1 mb-1">
             <span className="text-xs font-bold uppercase tracking-wider text-[#71717a] dark:text-[#a1a1aa]">
               Ecosystem Products
@@ -110,10 +109,49 @@ export function Navbar() {
             </button>
           </div>
 
+          {/* Primary Nav Links */}
+          <div className="grid grid-cols-2 gap-2 pb-2 border-b border-[#e4e4e7] dark:border-[#27272a]">
+            <a
+              href="#"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] dark:hover:bg-[#18181b]"
+            >
+              Home
+            </a>
+            <a
+              href="#mission"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] dark:hover:bg-[#18181b]"
+            >
+              Mission
+            </a>
+            <a
+              href="#services"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] dark:hover:bg-[#18181b]"
+            >
+              Products
+            </a>
+            <a
+              href="#architecture"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] dark:hover:bg-[#18181b]"
+            >
+              About Us
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] p-2 rounded-lg hover:bg-[#fafafa] dark:hover:bg-[#18181b] col-span-2"
+            >
+              Connect
+            </a>
+          </div>
+
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
+            className="text-sm sm:text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
           >
             <span>1. Freemann Firms Investments</span>
             <span className="text-xs text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 px-2.5 py-0.5 rounded-full font-bold">Live</span>
@@ -121,7 +159,7 @@ export function Navbar() {
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
+            className="text-sm sm:text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
           >
             <span>2. Freemann Firms Academy</span>
             <span className="text-xs text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full font-bold">Open</span>
@@ -129,7 +167,7 @@ export function Navbar() {
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
+            className="text-sm sm:text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
           >
             <span>3. Freemann Firms P2P</span>
             <span className="text-xs text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800 px-2.5 py-0.5 rounded-full font-bold">Active</span>
@@ -137,7 +175,7 @@ export function Navbar() {
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
+            className="text-sm sm:text-base font-semibold text-[#18181b] dark:text-[#f4f4f5] hover:text-[#a500a3] dark:hover:text-[#d600b1] p-2.5 rounded-xl hover:bg-[#fafafa] dark:hover:bg-[#18181b] transition-colors flex items-center justify-between"
           >
             <span>4. Freemann Firms Online Market</span>
             <span className="text-xs text-[#a500a3] dark:text-[#d600b1] bg-[#a500a3]/10 dark:bg-[#a500a3]/20 border border-[#a500a3]/20 dark:border-[#a500a3]/40 px-2.5 py-0.5 rounded-full font-bold">Soon</span>
