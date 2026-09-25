@@ -30,9 +30,9 @@ export function PortalHero() {
             <span>THE FREEMANN FIRMS ECOSYSTEM</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 leading-[1.12] mb-3 sm:mb-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-[#18181b] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-zinc-100 dark:to-zinc-400 leading-tight mb-3 sm:mb-4">
             The Unified Ecosystem for{" "}
-            <span className="text-[#a500a3] dark:text-[#d600b1] block sm:inline">
+            <span className="text-[#a500a3] dark:text-[#d600b1]">
               Modern Wealth & Trade.
             </span>
           </h1>
@@ -41,15 +41,15 @@ export function PortalHero() {
             Explore the interconnected Freemann Firms ecosystem seamlessly powering crypto-driven fund management, direct P2P exchange rails, 1-on-1 Forex trading mentorship, and universal online commerce in one unified gateway.
           </p>
 
-          {/* Quick Jump Buttons - Uppercase & Bold Pills */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mb-5 sm:mb-6 w-full">
+          {/* Quick Jump Buttons - On a straight line */}
+          <div className="flex items-center justify-start lg:justify-start gap-2 sm:gap-2.5 mb-5 sm:mb-6 w-full overflow-x-auto pb-1.5 pt-0.5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {quickLinks.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <a
                   key={idx}
                   href={item.href}
-                  className="px-3.5 py-1.5 sm:py-2 rounded-full bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#18181b] dark:text-[#f4f4f5] flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 transition-all hover:bg-[#fafafa] dark:hover:bg-[#202025] shadow-xs hover:shadow-sm active:scale-95 whitespace-nowrap"
+                  className="px-3.5 py-1.5 sm:py-2 rounded-full bg-white dark:bg-[#141418] border border-[#e4e4e7] dark:border-[#27272a] hover:border-[#a500a3] dark:hover:border-[#a500a3] text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#18181b] dark:text-[#f4f4f5] flex items-center justify-center gap-1.5 sm:gap-2 transition-all hover:bg-[#fafafa] dark:hover:bg-[#202025] shadow-xs hover:shadow-sm active:scale-95 whitespace-nowrap shrink-0"
                 >
                   <Icon className="w-3.5 h-3.5 text-[#a500a3] dark:text-[#d600b1] shrink-0" />
                   <span>{item.label}</span>

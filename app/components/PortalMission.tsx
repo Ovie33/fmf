@@ -6,7 +6,7 @@ import { CheckCircle2, Sparkles } from "lucide-react";
 export function PortalMission() {
   const beliefs = [
     { label: "Performance over speculation", desc: "Fund managers only profit when clients earn verifiable returns." },
-    { label: "100% Client custody", desc: "Multi-signature segregated security with strict stop-loss caps and zero rehypothecation." },
+    { label: "External Contract Custody", desc: "Assets are secured in dedicated external wallets created by the super admin during contracts, with real-time balance tracking for investment pools." },
     { label: "Direct participation", desc: "Peer-to-peer rails and 1-on-1 mentorship connecting real people directly to wealth." },
     { label: "Practical wealth systems", desc: "Universal trading and digital asset management engineered for lasting impact." },
   ];
