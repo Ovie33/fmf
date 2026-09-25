@@ -73,7 +73,7 @@ export function PortalServices() {
       metrics: [
         { label: "Mentorship", value: "1 on 1" },
         { label: "Channels", value: "WhatsApp" },
-        { label: "Cost", value: "₦25k per month" },
+        { label: "Cost", value: "$18 per month" },
       ],
       features: [
         "Specialized curriculum in complex financial markets",
