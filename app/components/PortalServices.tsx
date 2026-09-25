@@ -96,7 +96,7 @@ export function PortalServices() {
       illustrationDark: "/images/service-p2p-dark-v2.jpg",
       isLive: true,
       metrics: [
-        { label: "Service Fees", value: "0.7% on withdrawals" },
+        { label: "Withdraw Fee", value: "0.7%" },
         { label: "Settlement", value: "Instant P2P" },
         { label: "Support", value: "WhatsApp" },
       ],

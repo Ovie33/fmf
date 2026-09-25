@@ -37,7 +37,7 @@ export function PortalMission() {
         {/* Core Beliefs Checklist */}
         <div className="w-full flex flex-col items-center gap-3 pt-2">
           <p className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#18181b] dark:text-white">
-            What We Belive in:
+            What We Belive:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full text-left">
             {beliefs.map((item, idx) => (

@@ -17,7 +17,7 @@ export function PortalCallout() {
           </span>
 
           <h2 className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold max-w-5xl leading-[1.15] tracking-tight">
-            Whether you&apos;re an investor, trader, merchant, or learner there is a place for you inside our ecosystem.
+            Whether you&apos;re an investor, trader, merchant, or student there is a place for you inside our ecosystem.
           </h2>
 
           <p className="relative z-10 text-sm sm:text-base md:text-base lg:text-lg text-purple-100 max-w-3xl leading-relaxed">
