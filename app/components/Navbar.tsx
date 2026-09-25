@@ -89,7 +89,7 @@ export function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-white dark:bg-[#09090b] border-b border-[#e4e4e7] dark:border-[#27272a] p-5 flex flex-col gap-3 xl:hidden shadow-xl animate-in slide-in-from-top-2">
           <div className="flex items-center justify-between px-1 mb-1">
             <span className="text-xs font-bold uppercase tracking-wider text-[#71717a] dark:text-[#a1a1aa]">
-              Ecosystem Products
+              Links
             </span>
             <button
               onClick={toggleTheme}
@@ -146,6 +146,13 @@ export function Navbar() {
             >
               Connect
             </a>
+          </div>
+
+          {/* Ecosystem Products Section Header */}
+          <div className="px-1 pt-1">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#71717a] dark:text-[#a1a1aa]">
+              Ecosystem Products
+            </span>
           </div>
 
           <a
